@@ -67,16 +67,6 @@ This book is the first hatch. The rest happens by itself if you don't stop fixin
 
 Don't pick "senior or manager" in week one. In week one, `Hello` has to print. A career is what grows out of a pile of evenings, not a slide labeled "trajectory."
 
-== English. Yes, even in the English edition
-
-The compiler, Spring, Stack Overflow, most of the books — the words are `null`, `commit`, `stack trace`. Not "business English for airport small talk." If English isn't your first language, a little every day still helps: docs, other people's READMEs, subtitles. It is *not* inside our forty minutes of Lisp plus two hours of Java. We already stuffed in the parentheses. English is a home quest. There is no answer key at the back. There is the internet.
-
-#os[
-  You can leave the IntelliJ UI in whatever language feels calm. Compiler errors will still be in English. Get used to reading the red, not translating every word: by week three `cannot find symbol` is as domestic as "we're out of milk."
-]
-
-Don't wait for "C1 first, then Java." You need "I read a paragraph of docs and didn't die." That grows on the road if you don't treat English READMEs like fire.
-
 == Why Lisp then
 
 Because the on-ramp to Java is easy to turn into six months of `@Autowired` annotations and a quiet wish to go live in the woods. Lisp in a REPL shows the same ideas naked: a list, a function, recursion, "data is code too." Play with lists and `ArrayList` and JSON stop being hieroglyphs. Forty minutes a day — so you don't hate programming by month three of Spring.

@@ -11,7 +11,7 @@
 - *Sat:* two or three hours on the project only.
 - *Sun:* a walk, or a small sabotage. Not a third chapter.
 
-SICP — when you asked yourself. Microservices — after one normal program. GitHub — from lesson 0. English — every day, but not instead of Java: it isn't on the book's schedule.
+SICP — when you asked yourself. Microservices — after one normal program. GitHub — from lesson 0.
 
 If the evening got eaten — don't "catch up three chapters." One chunk of Lisp *or* one chunk of Java, and a commit. The napkin is not a judge.
 
@@ -109,15 +109,7 @@ Order, not panic:
 
 Stuck three days on Hibernate — that's the profession, not a sign to leave. Stuck three days installing a JDK — go back to the workshop, don't jump to month 3.
 
-== H. English on a napkin
-
-Words it hurts to be without:
-
-`build`, `run`, `debug`, `commit`, `push`, `pull`, `merge`, `branch`, `issue`, `stack trace`, `null`, `exception`, `timeout`, `port already in use`, `permission denied`, `not found`, `bad request`, `unauthorized`, `forbidden`.
-
-Don't learn them like a school vocab list. Hit one in an error — translate *that* phrase, write it in the station notebook. In a month the notebook becomes a dictionary by itself.
-
-== I. What counts as "I finished the book"
+== H. What counts as "I finished the book"
 
 Not the last page. This:
 

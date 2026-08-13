@@ -143,23 +143,15 @@
   text(size: 10pt, fill: rgb("#6b6458"))[Evgeniy again. Grok doesn't write résumés: under "experience" he'd put "the entire internet," and HR would scream.]
   v(0.65cm)
   [
-    My name is *Evgeniy Tyurkin*. I live in Toronto. By day — Staff Data Engineer at eBay: seller recommendations and analytics, Kafka, GraphQL, OpenSearch, Java, several datacenters that hate it when you "just restart the service for a minute." By evening — parentheses, Emacs, and this book. The huskies believe evening starts at 7 a.m. They're right more often than Kafka is.
+    My name is *Evgeniy Tyurkin*. I live in Toronto. Java has paid the bills for more than twenty years. Lisp keeps me from hating it. Evenings: parentheses, Emacs, and this book. From Emacs I wrote #link("https://github.com/etyurkin/emagent")[emagent] so I could talk to models not in a browser but inside a Lisp program. Recursion, yes.
   ]
   v(0.5em)
   [
-    Twenty-plus years in the job, if you count from St. Petersburg, when they sat me down at Java and the client was called T-Mobile UK. Then browser VoIP with no install (yes, that once looked like the future), a requirements editor, then a long stretch at Oracle Eloqua — multi-tenant marketing, queues, streaming, mentoring people who later start yelling at Hibernate themselves. Then Ford's connected-vehicle cloud (Autonomic), a B2B platform on GCP, a short stop in agency analytics, and back to a marketplace. Master's from Siberian Federal University, systems analysis and management. This is not "I'm too important for Hello.java." This is "I was already fixing Hello.java in 2004 and I still do, only the paycheck changed."
+    The law "no Kafka until you have a monolith" isn't the piety of someone who fears Kafka. That's someone who eats Kafka for breakfast at work and *therefore* knows what it isn't: not a junior's entry ticket.
   ]
   v(0.5em)
   [
-    If you open this book and see the law "no Kafka until you have a monolith" — that isn't the piety of someone who fears Kafka. That's someone who eats Kafka for breakfast at work and *therefore* knows what it isn't: not a junior's entry ticket, and not a substitute for a program you can run. Microservices, Kubernetes, GraphQL — later, when there's something to slice. First there has to be something. Otherwise the résumé lies more beautifully than the code.
-  ]
-  v(0.5em)
-  [
-    Java pays my bills. Lisp keeps me from hating Java. Emacs is a hole I climbed into on purpose, and from there I wrote #link("https://github.com/etyurkin/emagent")[emagent] so I could talk to models not in a browser but inside a giant Lisp program. Recursion, yes. Again.
-  ]
-  v(0.5em)
-  [
-    Get in touch if you need to (work, parentheses, "are the huskies real"): #link("https://www.linkedin.com/in/etyurkin")[linkedin.com/in/etyurkin] — longer there, and no turkey. Code: #link("https://github.com/etyurkin")[github.com/etyurkin]. Languages: Russian and English. The résumé has certificates; this book doesn't: WhiteHat once upon a time, ScrumMaster expired, as is proper for anything that doesn't start from a command.
+    If you need the long version of the job — you'll find it: #link("https://www.linkedin.com/in/etyurkin")[linkedin.com/in/etyurkin]. Code: #link("https://github.com/etyurkin")[github.com/etyurkin]. I'm not pasting LinkedIn in here: the book is about parentheses, not a résumé.
   ]
   v(0.5em)
   [
@@ -177,7 +169,23 @@
   text(size: 10pt, fill: rgb("#6b6458"))[Evgeniy, not Grok. The model doesn't visit other people's houses.]
   v(0.75cm)
   [
-    *Mikhail Ivanov* — friend and mentor. Showed me Linux when a black window still looked like a threat from a movie, and Lisp when parentheses still looked like a joke. I've lived in that black window ever since and even call it a workshop. He kept feeding me new ideas: emagent didn't come from a vacuum, it came from conversations after which you want to open Emacs, not lie face-down on the table. If station MODULE is sometimes smarter than the author — that's probably Mikhail's echo. If it's dumber — the author did that himself.
+    *Masha* (Maria) — partner in life. She pushed me forward and higher when I was ready to stay on the lower deck. For our daughter Eva. For twenty years of patience with my antics: parentheses at three in the morning, "five more minutes," a station blinking red, and a man who promised "I'll finish in a second." Twenty years is not "support in the stories." It's when leaving was already an option — and she didn't.
+  ]
+  v(0.55em)
+  [
+    *Eva* — my daughter. She helped me remember childhood: not a slide labeled "family" in a deck, but a living person next to whom the world is new again. And she sometimes let me teach her something. "Sometimes" is the important word. You can teach your own only until they notice you're still learning too.
+  ]
+  v(0.55em)
+  [
+    My parents — for putting me on my feet and picking me up when I fell. I did not fall gracefully. They picked me up without a lecture about trajectory. Without them the preface, the REPL, and this station lose a lot of meaning.
+  ]
+  v(0.55em)
+  [
+    The late *Valentin Fyodorovich Slyusarchuk* — for believing when the granite of science was still whole and the teeth were not. He helped chew through it. A teacher's faith doesn't go in PATH, but without it a lot of people never reach the first parenthesis.
+  ]
+  v(0.55em)
+  [
+    His son *Mitya*, and also *Valka*, *Vitalya*, and *Kirill* — for a magical youth, and for not asking "why do you need this" when things were hard. Youth comes in flavors. Theirs was magical, like in the credits, only without subtitles and without a second take.
   ]
   v(0.55em)
   [
@@ -189,22 +197,22 @@
   ]
   v(0.55em)
   [
-    The dogs. Siberian huskies *Jay* and *Sasha*. They wake me for a two-hour walk every morning, winter and summer — no respect for deadlines, for the macros chapter, or for the opinion that "five more minutes." Later, when I disappear into projects and the station is already blinking red at three in the morning, they call me to bed. They don't let me slack by day and don't let me burn by night. The best managers I've met: they don't write Jira tickets, they just stand at the door. If the textbook ends on time instead of on page five hundred about Kafka — that's them.
+    *Mikhail Ivanov* — friend and mentor. Showed me Linux when a black window still looked like a threat from a movie, and Lisp when parentheses still looked like a joke. I've lived in that black window ever since and even call it a workshop. He kept feeding me new ideas: emagent didn't come from a vacuum, it came from conversations after which you want to open Emacs, not lie face-down on the table. If station MODULE is sometimes smarter than the author — that's probably Mikhail's echo. If it's dumber — the author did that himself.
   ]
   v(0.55em)
   [
-    *Sergey Petrov* — for long conversations about everything, and more. "More" is when you can no longer tell where daily life ends, where Lisp begins, where the universe is, and the tea has gone cold for the second time. Those talks don't go on a résumé. The ears of this book stick out of them anyway.
+    *Sergey Petrov* — for long conversations about everything, and more. "More" is when you can no longer tell where daily life ends, where Lisp begins, where the universe is, and the tea has gone cold for the second time. And for the fretless guitar: when parentheses and people don't help, what's left is an instrument without frets, where a miss is audible at once. In moments of weakness that's more honest than Hibernate. Those talks don't go on a résumé. The ears of this book stick out of them anyway.
   ]
   v(0.55em)
   [
-    His son *Danya* — for the idea of writing it. Adults walk in circles: "we should write a textbook," "someday," "when there's time." Danya said it straight. After that, blame the parentheses and stubbornness. If you're reading this — nod to Danya. He didn't ask for a fee. A dog would have eaten the fee first anyway.
-  ]
-  v(0.55em)
-  [
-    And my parents — for the fact that I exist. Without that, the preface, the REPL, and the huskies lose a lot of meaning. Thank you for not talking me out of it when, instead of a "normal profession," there were parentheses, a bow, and two-hour walks in the snow. The normal profession, it turns out, is the parentheses. The rest is a bonus.
+    His son *Danya* — not because he asked for the book. He didn't. The idea had lived for a long time, walked in circles, waited for an occasion. Danya became the occasion and the guinea-pig student: a living person you can explain a variable to, not an imaginary junior from a slide. If you're reading this — nod to Danya. The page count is not his fault. Blame the parentheses and stubbornness.
   ]
   v(0.7em)
   [
-    If I forgot someone — write. Second edition. Or just come for a walk: Jay and Sasha share space, not chapters. Grok isn't in the acknowledgments: he doesn't walk, doesn't scare turkeys, and won't go on a two-hour walk by himself. He does put parentheses in. Sometimes even the ones we asked for.
+    And everyone, everyone, everyone who showed up along the way and cannot be listed here. If we start, the book will forget what it is about. It is about parentheses and Java. The people are in life. Thank you for being there.
+  ]
+  v(0.55em)
+  [
+    If I forgot someone — write. Second edition. Grok isn't in the acknowledgments: he doesn't walk, doesn't scare turkeys, and won't tune a fretless guitar. He does put parentheses in. Sometimes even the ones we asked for.
   ]
 }

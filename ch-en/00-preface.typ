@@ -117,8 +117,6 @@ In every README — what it is, how to run it, a couple of examples. Honest term
 
 No "become a senior in 21 days." No Kubernetes in chapter one. No promise of an offer by a date. There is a schedule, a station, parentheses, and Java 21.
 
-No separate English course inside the two hours forty. This edition is already in English; the jargon still wants daily contact with docs and other people's READMEs. That's a home quest. There is no answer key at the back of the book. There is the internet.
-
 No correct answer to "IntelliJ or VS Code." There is "install one and write." Editor wars are a hobby for people who already have a job.
 
 No mobile development on the main path. There is a spare hatch at the end: Android, if backend listings look through you. Same Java. Different screen.

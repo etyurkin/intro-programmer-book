@@ -66,7 +66,7 @@ make clean    # delete both PDFs
 ```
 book.typ / book-en.typ     # entry points
 lib.typ / lib-en.typ       # callouts, cover, authors, thanks
-ch/                        # Russian chapters
+ch-ru/                     # Russian chapters
 ch-en/                     # English chapters
 Makefile
 ```
@@ -75,7 +75,7 @@ Chapters: how to read → why this job → how a computer works → workshop →
 
 ## Authors
 
-**Evgeniy Tyurkin** — human. Toronto. Staff Data Engineer at eBay by day; parentheses and Emacs by evening. Twenty-plus years of Java (and the other screwdrivers). The “no Kafka until you have a monolith” rule is from someone who eats Kafka at work and therefore knows it is not a junior’s entry ticket.
+**Evgeniy Tyurkin** — human. Toronto. Java for twenty-plus years; parentheses and Emacs by evening. The “no Kafka until you have a monolith” rule is from someone who eats Kafka at work and therefore knows it is not a junior’s entry ticket.
 
 - LinkedIn: [linkedin.com/in/etyurkin](https://www.linkedin.com/in/etyurkin)
 - GitHub: [github.com/etyurkin](https://github.com/etyurkin)
@@ -87,8 +87,10 @@ Chapters: how to read → why this job → how a computer works → workshop →
 
 [MIT](LICENSE). Copyright (c) 2026 Evgeniy Tyurkin.
 
+Yes, that MIT. They used to teach computer science from SICP. Something went wrong, and now they teach Python. Apparently SICP really is a bit dry. We said so in the preface; they confirmed it with a whole curriculum.
+
 Use the text and the example code. Keep the copyright notice. Don't republish Barski or SICP as this book — we didn't copy them, and you shouldn't either. Station MODULE is already on duct tape.
 
 ## Acknowledgments
 
-In the PDF, after the author pages: Mikhail Ivanov, Steven and Sean, the late Terry, huskies Jay and Sasha, Sergey Petrov, Danya (who said “write the book”), and Evgeniy’s parents. Grok does not go on the thanks list. He doesn’t walk the dogs.
+In the PDF, after the author pages: Masha, Eva, parents, the late Valentin Fyodorovich Slyusarchuk, Mitya and friends, Steven and Sean, the late Terry, Mikhail Ivanov, Sergey Petrov (and the fretless guitar), Danya (the occasion, not the one who ordered the book). Then everyone who cannot be listed or the book forgets what it is about. Grok does not go on the thanks list.
