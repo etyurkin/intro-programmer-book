@@ -15,7 +15,7 @@
 #set text(font: ("Times New Roman", "Liberation Serif"), lang: "en", size: 12pt, hyphenate: true)
 #set par(justify: true, leading: 0.84em, first-line-indent: 0pt, spacing: 0.7em)
 #set heading(numbering: "1.1")
-#show raw: set text(font: ("Menlo", "Consolas", "Courier New"), size: 8.6pt)
+#show raw: set text(font: ("Menlo", "Consolas", "Courier New", "Liberation Mono", "DejaVu Sans Mono"), size: 8.6pt)
 #set list(indent: 1em)
 #set enum(indent: 1em)
 

@@ -1,0 +1,55 @@
+name: Build PDFs
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pdfs-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: typst-community/setup-typst@v4
+        with:
+          typst-version: "0.15.1"
+
+      - name: Install fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-liberation fonts-dejavu-core
+
+      - run: make pdfs
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pdfs
+          path: |
+            intro-k-professii-programmist.pdf
+            intro-to-the-programming-profession.pdf
+          if-no-files-found: error
+
+      - name: Publish latest PDFs
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: pdfs
+          name: Latest PDFs
+          body: |
+            Built from ${{ github.sha }}.
+            Russian: `intro-k-professii-programmist.pdf`
+            English: `intro-to-the-programming-profession.pdf`
+          files: |
+            intro-k-professii-programmist.pdf
+            intro-to-the-programming-profession.pdf
+          fail_on_unmatched_files: true
+          make_latest: true

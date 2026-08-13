@@ -2,15 +2,17 @@ TYPST := typst
 PDF := intro-k-professii-programmist.pdf
 PDF_EN := intro-to-the-programming-profession.pdf
 
-.PHONY: all pdf pdf-en watch clean
+.PHONY: all pdf pdf-en pdfs watch clean
 
-all: pdf
+all: pdfs
 
 pdf:
 	$(TYPST) compile book.typ $(PDF)
 
 pdf-en:
 	$(TYPST) compile book-en.typ $(PDF_EN)
+
+pdfs: pdf pdf-en
 
 watch:
 	$(TYPST) watch book.typ $(PDF)

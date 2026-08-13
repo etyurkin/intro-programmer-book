@@ -14,12 +14,16 @@ A human and a robot wrote this in Emacs, which is to say inside a giant Lisp pro
 
 ## Read the book
 
-Built PDFs (open these if you don’t want to compile):
+PDFs are built by GitHub Actions, not stored in git.
+
+- Latest files: [Releases / Latest PDFs](https://github.com/etyurkin/intro-programmer-book/releases/latest)
+- Or Actions → latest green run → Artifacts → `pdfs`
+- Or compile locally (`make pdfs`)
 
 | Language | File |
 |---|---|
-| Русский | [`intro-k-professii-programmist.pdf`](intro-k-professii-programmist.pdf) |
-| English | [`intro-to-the-programming-profession.pdf`](intro-to-the-programming-profession.pdf) |
+| Русский | `intro-k-professii-programmist.pdf` |
+| English | `intro-to-the-programming-profession.pdf` |
 
 macOS Preview: quit the app fully (**Cmd+Q**) before reopening a newly built PDF, or the sidebar table of contents may stay empty from a cached file.
 
@@ -45,11 +49,12 @@ You do **not** need Kafka in week one. You do need GitHub on day one, even if th
 brew install typst
 
 # then
-make pdf      # Russian → intro-k-professii-programmist.pdf
-make pdf-en   # English  → intro-to-the-programming-profession.pdf
+make pdfs     # both languages
+make pdf      # Russian only
+make pdf-en   # English only
 ```
 
-Font warnings about Liberation Serif / Consolas on macOS are harmless: the book falls back to Times New Roman and Menlo.
+On Ubuntu CI (and WSL) the book uses Liberation Serif / Liberation Mono. On macOS, Times New Roman and Menlo if they exist; missing-font warnings are harmless.
 
 ```
 make watch    # rebuild Russian on save
