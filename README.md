@@ -93,4 +93,4 @@ Use the text and the example code. Keep the copyright notice. Don't republish Ba
 
 ## Acknowledgments
 
-In the PDF, after the author pages: Masha, Eva, parents, the late Valentin Fyodorovich Slyusarchuk, Mitya and friends, Steven and Sean, the late Terry, Misha Ivanov, Sergey Petrov (and the fretless guitar), Danya (the occasion, not the one who ordered the book). Then everyone who cannot be listed or the book forgets what it is about. Grok does not go on the thanks list.
+In the PDF, after the author pages: Masha, Eva, huskies Jay and Sasha, parents, the late Valentin Fyodorovich Slyusarchuk, Mitya and friends, Steven and Sean, the late Terry, Misha Ivanov, Sergey Petrov (and the fretless guitar), Danya (the occasion, not the one who ordered the book). Then everyone who cannot be listed or the book forgets what it is about. Grok does not go on the thanks list.

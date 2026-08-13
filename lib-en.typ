@@ -177,6 +177,10 @@
   ]
   v(0.55em)
   [
+    The dogs. Siberian huskies *Jay* and *Sasha*. They wake me for a two-hour walk every morning, winter and summer — no respect for deadlines, for the macros chapter, or for the opinion that "five more minutes." Later, when I disappear into projects and the station is already blinking red at three in the morning, they call me to bed. They don't let me slack by day and don't let me burn by night. The best managers I've met: they don't write Jira tickets, they just stand at the door. If the textbook ends on time instead of on page five hundred about Kafka — that's them.
+  ]
+  v(0.55em)
+  [
     My parents — for putting me on my feet and picking me up when I fell. I did not fall gracefully. They picked me up without a lecture about trajectory. Without them the preface, the REPL, and this station lose a lot of meaning.
   ]
   v(0.55em)
