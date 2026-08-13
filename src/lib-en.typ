@@ -195,7 +195,7 @@
   ]
   v(0.55em)
   [
-    The late *Terry*, with whom we went turkey hunting. We didn't catch anyone. It was fun. The turkey, as far as anyone knows, is also pleased. If there's a forest on the other side — may something at least bite there. On our side we didn't even bring a club, only good company and a zero trophy that still beats some green tests in memory.
+    The late *Terry*, with whom we went turkey hunting — bows and arrows. We didn't catch anyone. It was fun. The turkey, as far as anyone knows, is also pleased. If there's a forest on the other side — may something at least rustle there. On our side we brought a bow, good company, and a zero trophy that still beats some green tests in memory.
   ]
   v(0.55em)
   [
