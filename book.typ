@@ -1,4 +1,5 @@
 #import "lib.typ": *
+#import "html-boxes.typ": html-colored-block, html-colored-box
 
 #set document(
   title: "Введение в профессию программиста",
@@ -21,18 +22,30 @@
 
 #show heading: it => {
   set par(first-line-indent: 0pt)
-  v(0.55em)
-  it
-  v(0.2em)
+  context {
+    if target() != "html" { v(0.55em) }
+    it
+    if target() != "html" { v(0.2em) }
+  }
 }
 
-#show heading.where(level: 1): it => {
+#show link: it => underline(stroke: 0.4pt + rgb("#3d5a80"), it)
+
+#show align: it => context {
+  if target() == "html" { it.body } else { it }
+}
+#show block: html-colored-block
+#show box: html-colored-box
+
+#show heading.where(level: 1): it => context {
   set par(first-line-indent: 0pt, justify: false)
   if it.numbering == none {
     set text(size: 22pt)
-    v(0.6cm)
+    if target() != "html" { v(0.6cm) }
     it
-    v(0.5em)
+    if target() != "html" { v(0.5em) }
+  } else if target() == "html" {
+    it
   } else {
     pagebreak(weak: true)
     set text(size: 20pt)
@@ -62,8 +75,6 @@
   radius: 2pt,
   it,
 )
-
-#show link: it => underline(stroke: 0.4pt + rgb("#3d5a80"), it)
 
 #titlepage
 #pagebreak()

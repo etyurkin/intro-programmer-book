@@ -4,3 +4,5 @@
 *~
 .typst-cache/
 *.pdf
+*.html
+*.epub
