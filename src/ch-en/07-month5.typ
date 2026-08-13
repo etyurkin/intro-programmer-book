@@ -377,10 +377,10 @@ A vector, append only, read from an index. Don't delete the old.
   `(produce 'airlock)` `(produce 'alarm)` `(consume 0)` → `AIRLOCK`. `(consume 1)` → `ALARM`. `(consume 2)` → `nil`. The log is still length 2. You didn't erase the air. You only looked.
 ]
 
-Barski would probably have made a game of this. We'll make a log. The game can wait until Sunday.
+We'll make a log. The game can wait until Sunday.
 
 #exercise("19.L1", "Lisp")[
-  A vector-log: append only, read from an index. Don't delete the old. A tiny Kafka in the REPL. Barski would probably have made a game of this. We'll make a log.
+  A vector-log: append only, read from an index. Don't delete the old. A tiny Kafka in the REPL. We'll make a log.
 ]
 
 #exercise("19.J1", "Java")[

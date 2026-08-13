@@ -6,7 +6,7 @@
 
 #set par(first-line-indent: 0pt)
 
-- *Mon–Thu:* 40 min Lisp (Barski and/or station MODULE) + 120 min Java (look a little, then until it runs).
+- *Mon–Thu:* 40 min Lisp (station MODULE) + 120 min Java (look a little, then until it runs).
 - *Fri:* Lisp + finish whatever fell apart.
 - *Sat:* two or three hours on the project only.
 - *Sun:* a walk, or a small sabotage. Not a third chapter.
@@ -31,7 +31,7 @@ If the question "what is a transaction" comes out as "well it's when" and then s
 
 == C. What else to read, if you aren't bored yet
 
-- Conrad Barski, *Land of Lisp* — a neighbor in spirit, not the text of this book. The orcs are his, the station is ours.
+- Conrad Barski, *Land of Lisp* — orcs, games, the same Common Lisp. If you want another universe in those same forty minutes.
 - One Java reference, not three courses at once. Horstmann or anything, as long as it's *one*.
 - Spring Guides — one per week's topic, not "all the guides over the weekend."
 - Postgres on your own `tasks` table. The postgresql.org docs, the SQL section. Boring, useful.
@@ -55,7 +55,7 @@ Grey zone: "sketch a test skeleton, I'll fill in the asserts." Allowed if you fi
 
 == E. About copying
 
-Code from the textbook — into your study repos, please. Don't put Barski's and Abelson's books into your own PDF. Quest answers are not a commercial product without your own work. Station MODULE is already on duct tape; let's skip the lawsuits.
+Code from the textbook — into your study repos, please. Quest answers are not a commercial product without your own work. Station MODULE is already on duct tape; let's skip the lawsuits.
 
 Other people's code from GitHub in a portfolio with no note — a lie. A fork signed "I changed this here" — fine. The difference is one sentence in the README.
 

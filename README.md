@@ -33,7 +33,6 @@ You do **not** need Kafka in week one. You do need GitHub on day one, even if th
 
 ## What this is not
 
-- Not [Conrad Barski](https://www.nostarch.com/landoflisp)’s *Land of Lisp*. Same family of parentheses, different circus. We stole the mood, not the text. His orcs, our station.
 - Not SICP from Monday. Open SICP when *you* ask why recursion works.
 - Not “become a senior in 21 days.”
 - Not a dump of Spring guides.
@@ -92,7 +91,7 @@ Chapters: how to read → why this job → how a computer works → workshop →
 
 Yes, that MIT. They used to teach computer science from SICP. Something went wrong, and now they teach Python. Apparently SICP really is a bit dry. We said so in the preface; they confirmed it with a whole curriculum.
 
-Use the text and the example code. Keep the copyright notice. Don't republish Barski or SICP as this book — we didn't copy them, and you shouldn't either. Station MODULE is already on duct tape.
+Use the text and the example code. Keep the copyright notice. Station MODULE is already on duct tape.
 
 ## Acknowledgments
 

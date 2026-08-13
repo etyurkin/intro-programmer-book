@@ -840,7 +840,7 @@ You made: state, a graph, items, a side effect, a save, a tiny command language,
 
 In the main course the same ideas will arrive as `TaskStore`, HTTP, and a table. Here they smell of airlock metal. You can go back to watch 1 and add a second crack. You can not go back. The log doesn't grade you.
 
-If you got hooked and you're writing a text station for a third night — set an alarm for Java. Station MODULE on a résumé doesn't feed you. Parentheses feed the brain. The brain then feeds Java. Barski might have nodded at that food chain. We still didn't steal his text.
+If you got hooked and you're writing a text station for a third night — set an alarm for Java. Station MODULE on a résumé doesn't feed you. Parentheses feed the brain. The brain then feeds Java.
 
 #sunday[
   Draw seven circles and the hatches. Walk a token. Then walk in the REPL. If they disagree — either the paper is lying, or `*doors*`. Usually `*doors*`.

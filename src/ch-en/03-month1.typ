@@ -400,7 +400,7 @@ Three working eye-runs before the quests.
 ]
 
 #exercise("1.J2", "Java")[
-  A game: the machine picks 1..10 (`Math.random()`), you guess once. "right" / "low" / "high". Almost Land of Lisp, only meaner, because you get one try.
+  A game: the machine picks 1..10 (`Math.random()`), you guess once. "right" / "low" / "high".
 ]
 
 #exercise("1.J3", "Java")[

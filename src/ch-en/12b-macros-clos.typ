@@ -621,7 +621,7 @@ Put it on one panel before it scatters across chapters:
 
 Why does a Java junior need this? Not to write Spring in CLOS. To see the *edge* of a language: what's a choice in Java, and what's industry habit. When you copy try/finally for the tenth time — remember a macro. When one dad's `extends` isn't enough — remember that's a Java limit, not physics. When Gradle spends five minutes building to change a status string — remember `defmethod` in the same REPL. When they say in an interview "a real language is Java" — you can nod: it feeds you. And have in your pocket forty minutes that feed curiosity.
 
-Land of Lisp shows this with games. Barski has his circus. We have a leaky station and someone else's probe. We didn't steal his text. The mood — that a language can be weird *and* useful for a head — we stole honestly.
+A language can be weird *and* useful for a head. We show that with a leaky station and someone else's probe.
 
 #github[
   In the README of folder `macros-clos/` three proofs, not slogans: `macroexpand-1` output; `typep` on an object with two parents; two different `module-status`es on the same instance without `(quit)`.
@@ -639,7 +639,7 @@ Don't rewrite Spring in CLOS. Don't macro every sneeze in teaching Lisp. Do:
 - not lie that a Java class and a CLOS class are the same word;
 - if AI comes up — don't mix 1958-with-parentheses and 2026-with-video-cards, but remember whose first workshop this was.
 
-That's enough so Land of Lisp (if you read as far as Barski's macro chapters) doesn't look like outer space, and Java objects don't look like a religion. Station MODULE after this is still leaky. The leaks just got *types of gadget*, and the language got *new words*. The duct tape didn't go anywhere. The probe, just in case, also once held on more than duct tape. Also on a REPL.
+That's enough so macros don't look like outer space, and Java objects don't look like a religion. Station MODULE after this is still leaky. The leaks just got *types of gadget*, and the language got *new words*. The duct tape didn't go anywhere. The probe, just in case, also once held on more than duct tape. Also on a REPL.
 
 == If they ask at dinner why you need parentheses
 

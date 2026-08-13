@@ -556,7 +556,7 @@ View Binding and Jetpack Compose are words Studio whispers from the doorstep. Bi
 Dark theme: a `Theme` in `themes.xml`, or just a dark background on the `LinearLayout` and light text. For a portfolio, a "light / dark" screenshot looks more grown-up than one more dependency. Don't install a theme library for two colors.
 
 #sunday[
-  Add a `×` and `÷` button if somehow they still aren't there. Then a darker theme. Then "hey, this could be a station calculator: watts and oxygen." If you slip into a game — that's normal. That's how Barski meant it, only he had orcs and we have orbit.
+  Add a `×` and `÷` button if somehow they still aren't there. Then a darker theme. Then "hey, this could be a station calculator: watts and oxygen." If you slip into a game — that's normal. A station calculator is still more honest than one more library.
 ]
 
 #rule[

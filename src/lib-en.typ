@@ -129,10 +129,6 @@
   [
     The arguments went like this. Evgeniy: "this reads like university." Grok: "add more Kafka." The human won, except the title page, where the model wrote itself in anyway. Fair: without one there would be no plan, without the other — three hundred pages across a few watches. Mistakes are split evenly. The funny ones get credited to Evgeniy. The rest are "Grok went for it."
   ]
-  v(0.55em)
-  [
-    Neither author is Conrad Barski. He wrote Land of Lisp himself, and we only stole the mood, not the text. If Barski is reading this: we mean well, honestly.
-  ]
 }
 
 #let aboutpage = {

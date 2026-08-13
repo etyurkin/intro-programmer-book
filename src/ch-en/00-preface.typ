@@ -12,9 +12,7 @@ Reading the whole book in a weekend, nodding, and closing it — almost nothing 
 
 == Two languages, and that isn't confusion
 
-*Lisp* is not here for the résumé. Almost nobody wants Lisp on a résumé, and that's wonderful: you can do stupid things. Forty minutes. Read a chunk → type it in the REPL → *definitely break it and fix it* → write a tiny horrible thing of your own. If you didn't break it — you weren't practicing, you were watching. Watching a welding show and actually welding are different jobs.
-
-*Land of Lisp* by Conrad Barski lives nearby: orcs, games, the same Common Lisp, a different circus. This textbook does not retell it (Barski's jokes are his). We have our own leaky orbital station, MODULE. Read Barski in those same forty minutes if you want another universe. Or alternate. The main thing is not to turn Lisp into lecture notes. Lecture notes about games are no longer a game.
+*Lisp* is not here for the résumé. Almost nobody wants Lisp on a résumé, and that's wonderful: you can do stupid things. Forty minutes. Read a chunk → type it in the REPL → *definitely break it and fix it* → write a tiny horrible thing of your own. If you didn't break it — you weren't practicing, you were watching. Watching a welding show and actually welding are different jobs. The main thing is not to turn Lisp into lecture notes. Lecture notes about parentheses are no longer parentheses.
 
 *Java* is what they pay you for later. Two hours. Twenty minutes of those looking at how an idea is built, and an hour and a half making it work *on your machine*. Red errors, docs, Stack Overflow, a dumb question to the chat next door — not failure. That's the profession, just without the salary. The salary shows up when you stop fainting at red.
 

@@ -91,4 +91,4 @@ Copying a quest from the answers in the first minute is like looking up a crossw
 
 Peeking after twenty minutes of anger — fine. You already thought. The brain got the query. Then the answer *lands*, instead of flying past.
 
-Code from this book — into your study repos, please. Barski's book and other people's commercial repos — don't pass them off as yours. The station is already on duct tape; let's skip lawsuits and résumé lies. Lies in orbit end with an open airlock.
+Code from this book — into your study repos, please. Other people's books and commercial repos — don't pass them off as yours. The station is already on duct tape; let's skip lawsuits and résumé lies. Lies in orbit end with an open airlock.

@@ -517,7 +517,7 @@ A stack for brackets is an ordinary list: `push` onto the head, `pop` from the h
 
 === Algorithms: pictures, not a medium marathon
 
-*Grokking Algorithms* (there are pictures, Barski would approve) and 3–4 easy problems a week. Not mediums in batches. Mediums in batches is how you burn out and start hating parentheses already on Java.
+*Grokking Algorithms* (there are pictures) and 3–4 easy problems a week. Not mediums in batches. Mediums in batches is how you burn out and start hating parentheses already on Java.
 
 Three things they actually ask with fingers:
 
