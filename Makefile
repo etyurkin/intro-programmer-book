@@ -5,36 +5,36 @@ PANDOC := pandoc
 SRC := src
 OUT := out
 
-PDF := $(OUT)/intro-k-professii-programmist.pdf
+PDF_RU := $(OUT)/intro-k-professii-programmist.pdf
 PDF_EN := $(OUT)/intro-to-the-programming-profession.pdf
-HTML := $(OUT)/intro-k-professii-programmist.html
+HTML_RU := $(OUT)/intro-k-professii-programmist.html
 HTML_EN := $(OUT)/intro-to-the-programming-profession.html
-EPUB := $(OUT)/intro-k-professii-programmist.epub
+EPUB_RU := $(OUT)/intro-k-professii-programmist.epub
 EPUB_EN := $(OUT)/intro-to-the-programming-profession.epub
 
-.PHONY: all pdf pdf-en pdfs html html-en epub epub-en epubs books watch clean
+.PHONY: all pdf-ru pdf-en pdfs html-ru html-en epub-ru epub-en epubs books watch clean
 
 all: books
 
 $(OUT):
 	mkdir -p $(OUT)
 
-pdf: $(OUT)
-	$(TYPST) compile $(SRC)/book.typ $(PDF)
+pdf-ru: $(OUT)
+	$(TYPST) compile $(SRC)/book.typ $(PDF_RU)
 
 pdf-en: $(OUT)
 	$(TYPST) compile $(SRC)/book-en.typ $(PDF_EN)
 
-pdfs: pdf pdf-en
+pdfs: pdf-ru pdf-en
 
-html: $(OUT)
-	$(TYPST_HTML) $(SRC)/book.typ $(HTML)
+html-ru: $(OUT)
+	$(TYPST_HTML) $(SRC)/book.typ $(HTML_RU)
 
 html-en: $(OUT)
 	$(TYPST_HTML) $(SRC)/book-en.typ $(HTML_EN)
 
-epub: html
-	$(PANDOC) $(HTML) -o $(EPUB) \
+epub-ru: html-ru
+	$(PANDOC) $(HTML_RU) -o $(EPUB_RU) \
 		--from html --to epub3 \
 		--css $(SRC)/epub.css \
 		--toc --toc-depth=2 --split-level=2 \
@@ -51,12 +51,12 @@ epub-en: html-en
 		--metadata title="Introduction to the Programmer's Profession" \
 		--metadata creator="Evgeniy Tyurkin"
 
-epubs: epub epub-en
+epubs: epub-ru epub-en
 
 books: pdfs epubs
 
 watch: $(OUT)
-	$(TYPST) watch $(SRC)/book.typ $(PDF)
+	$(TYPST) watch $(SRC)/book.typ $(PDF_RU)
 
 clean:
 	rm -rf $(OUT)

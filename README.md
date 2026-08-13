@@ -52,7 +52,7 @@ brew install typst pandoc
 make books    # PDFs + EPUBs, both languages
 make pdfs     # PDFs only
 make epubs    # EPUBs only (needs pandoc)
-make pdf      # Russian PDF
+make pdf-ru   # Russian PDF
 make pdf-en   # English PDF
 ```
 
