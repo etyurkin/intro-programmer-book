@@ -10,6 +10,18 @@ In six months this can grow a person companies hire as a junior. But only if the
 
 Reading the whole book in a weekend, nodding, and closing it — almost nothing happens. That isn't a scolding. That's physics. Programming lives in fingers and in errors, not in the feeling of "I kind of got it." Got it means you *changed* the example, it broke, you fixed it, and you can tell a neighbor *why* it broke.
 
+== Why learn languages if there's AI
+
+AI will do it. A service, a test, even a README where you "confidently know Kafka." Fast. Sometimes even right.
+
+The catch is the question. The model answers what you asked. "Write me a backend" — you get a cathedral with no evacuation plan. "Why does the button save a trailing space" — you get a decent answer *if* you already know a string can lie at the edges. That isn't from the chat. That's the foundation: a variable, an error, a file is not a database, a test is not a ritual.
+
+Without the foundation you cannot ask the right question. You'll ask "make it work" and sit in someone else's code like a dark compartment with no flashlight. In the interview they'll ask *you* for the flashlight. They won't let the model into the room.
+
+#slow[
+  AI speeds up the person who can see *where to look*. The person who can't, it drives to someone else's repository and leaves them there alone.
+]
+
 == Two languages, and that isn't confusion
 
 *Lisp* is not here for the résumé. Almost nobody wants Lisp on a résumé, and that's wonderful: you can do stupid things. Forty minutes. Read a chunk → type it in the REPL → *definitely break it and fix it* → write a tiny horrible thing of your own. If you didn't break it — you weren't practicing, you were watching. Watching a welding show and actually welding are different jobs. The main thing is not to turn Lisp into lecture notes. Lecture notes about parentheses are no longer parentheses.
