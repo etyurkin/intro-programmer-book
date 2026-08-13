@@ -1,0 +1,49 @@
+body {
+  line-height: 1.45;
+}
+
+h2, h3, h4 {
+  page-break-after: avoid;
+}
+
+pre {
+  font-size: 0.85em;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+  background: #f6f4ee;
+}
+
+code {
+  font-size: 0.9em;
+  word-wrap: break-word;
+  background: #f0ece3;
+}
+
+pre code {
+  background: transparent;
+}
+
+nav {
+  margin-bottom: 2em;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0.8em 0;
+}
+
+td, th {
+  border: 1px solid #d0cbb8;
+  padding: 7px;
+  text-align: left;
+}
+
+tr:first-child {
+  background: #e8e4d8;
+}
+
+tr:nth-child(even) {
+  background: #faf8f2;
+}

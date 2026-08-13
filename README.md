@@ -14,16 +14,16 @@ A human and a robot wrote this in Emacs, which is to say inside a giant Lisp pro
 
 ## Read the book
 
-PDFs are built by GitHub Actions, not stored in git.
+PDFs and EPUBs are built by GitHub Actions, not stored in git. EPUB reflows on a phone; PDF is the print layout.
 
-- Latest files: [Releases / Latest PDFs](https://github.com/etyurkin/intro-programmer-book/releases/latest)
-- Or Actions → latest green run → Artifacts → `pdfs`
-- Or compile locally (`make pdfs`)
+- Latest files: [Releases / Latest books](https://github.com/etyurkin/intro-programmer-book/releases/latest)
+- Or Actions → latest green run → Artifacts → `books`
+- Or compile locally (`make books`)
 
-| Language | File |
-|---|---|
-| Русский | `intro-k-professii-programmist.pdf` |
-| English | `intro-to-the-programming-profession.pdf` |
+| Language | PDF | EPUB |
+|---|---|---|
+| Русский | `intro-k-professii-programmist.pdf` | `intro-k-professii-programmist.epub` |
+| English | `intro-to-the-programming-profession.pdf` | `intro-to-the-programming-profession.epub` |
 
 macOS Preview: quit the app fully (**Cmd+Q**) before reopening a newly built PDF, or the sidebar table of contents may stay empty from a cached file.
 
@@ -46,19 +46,21 @@ You do **not** need Kafka in week one. You do need GitHub on day one, even if th
 
 ```bash
 # macOS
-brew install typst
+brew install typst pandoc
 
 # then
-make pdfs     # both languages
-make pdf      # Russian only
-make pdf-en   # English only
+make books    # PDFs + EPUBs, both languages
+make pdfs     # PDFs only
+make epubs    # EPUBs only (needs pandoc)
+make pdf      # Russian PDF
+make pdf-en   # English PDF
 ```
 
 On Ubuntu CI (and WSL) the book uses Liberation Serif / Liberation Mono. On macOS, Times New Roman and Menlo if they exist; missing-font warnings are harmless.
 
 ```
-make watch    # rebuild Russian on save
-make clean    # delete both PDFs
+make watch    # rebuild Russian PDF on save
+make clean    # delete PDFs, HTML, EPUBs
 ```
 
 ## Repo layout
@@ -66,9 +68,11 @@ make clean    # delete both PDFs
 ```
 book.typ / book-en.typ     # entry points
 lib.typ / lib-en.typ       # callouts, cover, authors, thanks
+html-boxes.typ             # EPUB/HTML colors for the same boxes
 ch-ru/                     # Russian chapters
 ch-en/                     # English chapters
 Makefile
+epub.css                   # phone wrapping + code background
 ```
 
 Chapters: how to read → why this job → how a computer works → workshop → months 1–6 (Java backend + Lisp) → Android hatch if backend won’t open → answers → appendix → glossary → extra station log → macros & CLOS → more Java labs.
@@ -93,4 +97,4 @@ Use the text and the example code. Keep the copyright notice. Don't republish Ba
 
 ## Acknowledgments
 
-In the PDF, after the author pages: Masha, Eva, huskies Jay and Sasha, parents, the late Valentin Fyodorovich Slyusarchuk, Mitya and friends, Steven and Sean, the late Terry, Misha Ivanov, Sergey Petrov (and the fretless guitar), Danya (the occasion, not the one who ordered the book). Then everyone who cannot be listed or the book forgets what it is about. Grok does not go on the thanks list. He doesn’t walk the dogs.
+In the book, after the author pages: Masha, Eva, huskies Jay and Sasha, parents, the late Valentin Fyodorovich Slyusarchuk, Mitya and friends, Steven and Sean, the late Terry, Misha Ivanov, Sergey Petrov (and the fretless guitar), Danya (the occasion, not the one who ordered the book). Then everyone who cannot be listed or the book forgets what it is about. Grok does not go on the thanks list. He doesn’t walk the dogs.

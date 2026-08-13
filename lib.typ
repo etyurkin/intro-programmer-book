@@ -1,3 +1,5 @@
+#import "html-boxes.typ": html-ink
+
 #let accent = rgb("#3d4f3a")
 
 #let callout(title, color, body) = {
@@ -9,7 +11,7 @@
     inset: 10pt,
     breakable: true,
     [
-      #text(weight: "bold", fill: color.darken(20%), title)
+      #html-ink(color.darken(20%), title, weight: "bold")
       #v(0.3em)
       #body
     ],
@@ -37,7 +39,7 @@
     breakable: true,
     [
       #text(weight: "bold")[Квест #id]
-      #text(size: 9.5pt, fill: rgb("#5a6450"))[ · #kind]
+      #html-ink(rgb("#5a6450"), [ · #kind], size: 9.5pt)
       #v(0.35em)
       #body
     ],
