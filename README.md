@@ -25,8 +25,6 @@ PDFs and EPUBs are built by GitHub Actions, not stored in git. EPUB reflows on a
 | Русский | `out/intro-k-professii-programmist.pdf` | `out/intro-k-professii-programmist.epub` |
 | English | `out/intro-to-the-programming-profession.pdf` | `out/intro-to-the-programming-profession.epub` |
 
-macOS Preview: quit the app fully (**Cmd+Q**) before reopening a newly built PDF, or the sidebar table of contents may stay empty from a cached file.
-
 ## Who it’s for
 
 Someone who has not programmed yet — or has, and bounced off annotations. Mac, Windows, WSL2. Java 21, Spring, PostgreSQL, then Redis / a queue / Docker, then interviews. Lisp stays at forty minutes a day the whole way: REPL, lists, a tiny language if you want, macros and CLOS when the main track is green.
