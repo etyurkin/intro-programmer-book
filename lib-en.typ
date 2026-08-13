@@ -121,7 +121,7 @@
   ]
   v(0.55em)
   [
-    They didn't talk in a browser chat. They talked through #link("https://github.com/etyurkin/emagent")[emagent] inside Emacs. That's funny twice. First, Emacs is almost entirely Lisp — the same family this book gives forty minutes a day. Second, they wrote a Lisp textbook while sitting inside a Lisp machine pretending to be an editor. Station MODULE loves that: recursion without tail-call elimination, but with a history in `*scratch*`.
+    They didn't talk in the official CLI in a neighboring terminal — that's a second kitchen with only a kettle. They talked through #link("https://github.com/etyurkin/emagent")[emagent] inside Emacs. That's funny twice. First, Emacs is almost entirely Lisp — the same family this book gives forty minutes a day. Second, they wrote a Lisp textbook while sitting inside a Lisp machine pretending to be an editor. Station MODULE loves that: recursion without tail-call elimination, but with a history in `*scratch*`.
   ]
   v(0.55em)
   [
@@ -143,7 +143,7 @@
   text(size: 10pt, fill: rgb("#6b6458"))[Evgeniy again. Grok doesn't write résumés: under "experience" he'd put "the entire internet," and HR would scream.]
   v(0.65cm)
   [
-    My name is *Evgeniy Tyurkin*. I live in Toronto. Java has paid the bills for more than twenty years. Lisp keeps me from hating it. Evenings: parentheses, Emacs, and this book. From Emacs I wrote #link("https://github.com/etyurkin/emagent")[emagent] so I could talk to models not in a browser but inside a Lisp program. Recursion, yes.
+    My name is *Evgeniy Tyurkin*. I live in Toronto. Java has paid the bills for more than twenty years. Lisp keeps me from hating it. Evenings: parentheses, Emacs, and this book. From Emacs I wrote #link("https://github.com/etyurkin/emagent")[emagent] so I wouldn't have to rent a second black window from the vendor. The official `claude` and Cursor CLIs work. They just aren't Emacs. Recursion, yes.
   ]
   v(0.5em)
   [
@@ -151,7 +151,7 @@
   ]
   v(0.5em)
   [
-    If you need the long version of the job — you'll find it: #link("https://www.linkedin.com/in/etyurkin")[linkedin.com/in/etyurkin]. Code: #link("https://github.com/etyurkin")[github.com/etyurkin]. I'm not pasting LinkedIn in here: the book is about parentheses, not a résumé.
+    Get in touch if you need to (work, parentheses, "are the huskies real"): #link("https://www.linkedin.com/in/etyurkin")[linkedin.com/in/etyurkin] — longer there, and no turkey. Code: #link("https://github.com/etyurkin")[github.com/etyurkin]. Languages: Russian and English. The résumé has certificates; this book doesn't: WhiteHat once upon a time, ScrumMaster expired, as is proper for anything that doesn't start from a command.
   ]
   v(0.5em)
   [
