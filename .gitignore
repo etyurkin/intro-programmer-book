@@ -1,0 +1,6 @@
+.DS_Store
+.typst-cache/
+out/
+*.pdf
+*.html
+*.epub
