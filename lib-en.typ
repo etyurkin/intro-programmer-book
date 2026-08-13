@@ -185,7 +185,7 @@
   ]
   v(0.55em)
   [
-    His son *Mitya*, and also *Valka*, *Vitalya*, and *Kirill* — for a magical youth, and for not asking "why do you need this" when things were hard. Youth comes in flavors. Theirs was magical, like in the credits, only without subtitles and without a second take.
+    His son *Mitya*, and also *Valka*, *Vitalya*, and *Kirill* — for the youth, and for not asking "why do you need this" when things were hard. Youth comes in flavors. Theirs was magical, like in the credits, only without subtitles and without a second take.
   ]
   v(0.55em)
   [
@@ -197,7 +197,7 @@
   ]
   v(0.55em)
   [
-    *Mikhail Ivanov* — friend and mentor. Showed me Linux when a black window still looked like a threat from a movie, and Lisp when parentheses still looked like a joke. I've lived in that black window ever since and even call it a workshop. He kept feeding me new ideas: emagent didn't come from a vacuum, it came from conversations after which you want to open Emacs, not lie face-down on the table. If station MODULE is sometimes smarter than the author — that's probably Mikhail's echo. If it's dumber — the author did that himself.
+    *Misha Ivanov* — friend and mentor. Showed me Linux when a black window still looked like a threat from a movie, and Lisp when parentheses still looked like a joke. I've lived in that black window ever since and even call it a workshop. He kept feeding me new ideas: emagent didn't come from a vacuum, it came from conversations after which you want to open Emacs, not lie face-down on the table. If station MODULE is sometimes smarter than the author — that's probably Misha's echo. If it's dumber — the author did that himself.
   ]
   v(0.55em)
   [
