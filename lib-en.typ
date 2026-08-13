@@ -169,7 +169,7 @@
   text(size: 10pt, fill: rgb("#6b6458"))[Evgeniy, not Grok. The model doesn't visit other people's houses.]
   v(0.75cm)
   [
-    *Masha* (Maria) — partner in life. She pushed me forward and higher when I was ready to stay on the lower deck. For our daughter Eva. For twenty years of patience with my antics: parentheses at three in the morning, "five more minutes," a station blinking red, and a man who promised "I'll finish in a second." Twenty years is not "support in the stories." It's when leaving was already an option — and she didn't.
+    *Masha* — partner in life. She pushed me forward and higher when I was ready to stay on the lower deck. For our daughter Eva. For twenty years of patience with my antics: parentheses at three in the morning, "five more minutes," a station blinking red, and a man who promised "I'll finish in a second." Twenty years is not "support in the stories." It's when leaving was already an option — and she didn't.
   ]
   v(0.55em)
   [
