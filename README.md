@@ -22,8 +22,8 @@ PDFs and EPUBs are built by GitHub Actions, not stored in git. EPUB reflows on a
 
 | Language | PDF | EPUB |
 |---|---|---|
-| Русский | `intro-k-professii-programmist.pdf` | `intro-k-professii-programmist.epub` |
-| English | `intro-to-the-programming-profession.pdf` | `intro-to-the-programming-profession.epub` |
+| Русский | `out/intro-k-professii-programmist.pdf` | `out/intro-k-professii-programmist.epub` |
+| English | `out/intro-to-the-programming-profession.pdf` | `out/intro-to-the-programming-profession.epub` |
 
 macOS Preview: quit the app fully (**Cmd+Q**) before reopening a newly built PDF, or the sidebar table of contents may stay empty from a cached file.
 
@@ -60,19 +60,20 @@ On Ubuntu CI (and WSL) the book uses Liberation Serif / Liberation Mono. On macO
 
 ```
 make watch    # rebuild Russian PDF on save
-make clean    # delete PDFs, HTML, EPUBs
+make clean    # delete out/
 ```
 
 ## Repo layout
 
 ```
-book.typ / book-en.typ     # entry points
-lib.typ / lib-en.typ       # callouts, cover, authors, thanks
-html-boxes.typ             # EPUB/HTML colors for the same boxes
-ch-ru/                     # Russian chapters
-ch-en/                     # English chapters
-Makefile
-epub.css                   # phone wrapping + code background
+Makefile README.md LICENSE .gitignore
+src/book.typ src/book-en.typ   # entry points
+src/lib.typ src/lib-en.typ     # callouts, cover, authors, thanks
+src/html-boxes.typ             # EPUB/HTML colors for the same boxes
+src/ch-ru/                     # Russian chapters
+src/ch-en/                     # English chapters
+src/epub.css                   # phone wrapping + code background
+out/                           # PDFs and EPUBs (gitignored)
 ```
 
 Chapters: how to read → why this job → how a computer works → workshop → months 1–6 (Java backend + Lisp) → Android hatch if backend won’t open → answers → appendix → glossary → extra station log → macros & CLOS → more Java labs.

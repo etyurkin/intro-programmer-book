@@ -34,10 +34,10 @@ jobs:
         with:
           name: books
           path: |
-            intro-k-professii-programmist.pdf
-            intro-k-professii-programmist.epub
-            intro-to-the-programming-profession.pdf
-            intro-to-the-programming-profession.epub
+            out/intro-k-professii-programmist.pdf
+            out/intro-k-professii-programmist.epub
+            out/intro-to-the-programming-profession.pdf
+            out/intro-to-the-programming-profession.epub
           if-no-files-found: error
 
       - name: Publish latest books
@@ -51,9 +51,9 @@ jobs:
             Russian: `intro-k-professii-programmist.pdf` / `.epub`
             English: `intro-to-the-programming-profession.pdf` / `.epub`
           files: |
-            intro-k-professii-programmist.pdf
-            intro-k-professii-programmist.epub
-            intro-to-the-programming-profession.pdf
-            intro-to-the-programming-profession.epub
+            out/intro-k-professii-programmist.pdf
+            out/intro-k-professii-programmist.epub
+            out/intro-to-the-programming-profession.pdf
+            out/intro-to-the-programming-profession.epub
           fail_on_unmatched_files: true
           make_latest: true
