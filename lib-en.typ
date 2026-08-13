@@ -217,6 +217,6 @@
   ]
   v(0.55em)
   [
-    If I forgot someone — write. Second edition. Grok isn't in the acknowledgments: he doesn't walk, doesn't scare turkeys, and won't tune a fretless guitar. He does put parentheses in. Sometimes even the ones we asked for.
+    If I forgot someone — write. Second edition. Grok isn't in the acknowledgments: he doesn't walk the dogs, doesn't scare turkeys, and won't tune a fretless guitar. He does put parentheses in. Sometimes even the ones we asked for.
   ]
 }
