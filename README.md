@@ -70,6 +70,7 @@ src/html-boxes.typ             # EPUB/HTML colors for the same boxes
 src/ch-ru/                     # Russian chapters
 src/ch-en/                     # English chapters
 src/epub.css                   # phone wrapping + code background
+src/cover-ru.typ src/cover-en.typ
 out/                           # PDFs and EPUBs (gitignored)
 ```
 

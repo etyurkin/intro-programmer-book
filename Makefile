@@ -11,6 +11,8 @@ HTML_RU := $(OUT)/intro-k-professii-programmist.html
 HTML_EN := $(OUT)/intro-to-the-programming-profession.html
 EPUB_RU := $(OUT)/intro-k-professii-programmist.epub
 EPUB_EN := $(OUT)/intro-to-the-programming-profession.epub
+COVER_RU := $(OUT)/cover-ru.png
+COVER_EN := $(OUT)/cover-en.png
 
 .PHONY: all pdf-ru pdf-en pdfs html-ru html-en epub-ru epub-en epubs books watch clean
 
@@ -33,23 +35,27 @@ html-ru: $(OUT)
 html-en: $(OUT)
 	$(TYPST_HTML) $(SRC)/book-en.typ $(HTML_EN)
 
-epub-ru: html-ru
+$(COVER_RU): $(SRC)/cover-ru.typ $(SRC)/lib.typ | $(OUT)
+	$(TYPST) compile --format png --ppi 144 $(SRC)/cover-ru.typ $(COVER_RU)
+
+$(COVER_EN): $(SRC)/cover-en.typ $(SRC)/lib-en.typ | $(OUT)
+	$(TYPST) compile --format png --ppi 144 $(SRC)/cover-en.typ $(COVER_EN)
+
+epub-ru: html-ru $(COVER_RU)
 	$(PANDOC) $(HTML_RU) -o $(EPUB_RU) \
 		--from html --to epub3 \
 		--css $(SRC)/epub.css \
+		--epub-cover-image $(COVER_RU) \
 		--toc --toc-depth=2 --split-level=2 \
-		--metadata lang=ru \
-		--metadata title="Введение в профессию программиста" \
-		--metadata creator="Евгений Тюркин"
+		--metadata-file $(SRC)/epub-ru.yaml
 
-epub-en: html-en
+epub-en: html-en $(COVER_EN)
 	$(PANDOC) $(HTML_EN) -o $(EPUB_EN) \
 		--from html --to epub3 \
 		--css $(SRC)/epub.css \
+		--epub-cover-image $(COVER_EN) \
 		--toc --toc-depth=2 --split-level=2 \
-		--metadata lang=en \
-		--metadata title="Introduction to the Programmer's Profession" \
-		--metadata creator="Evgeniy Tyurkin"
+		--metadata-file $(SRC)/epub-en.yaml
 
 epubs: epub-ru epub-en
 
