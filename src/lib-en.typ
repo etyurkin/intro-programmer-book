@@ -127,7 +127,7 @@
   ]
   v(0.55em)
   [
-    The arguments went like this. Evgeniy: "this reads like university." Grok: "add more Kafka." The human won, except the title page, where the model wrote itself in anyway. Fair: without one there would be no plan, without the other — three hundred pages across a few watches. Mistakes are split evenly. The funny ones get credited to Evgeniy. The rest are "Grok went for it."
+    The arguments went like this. Evgeniy: "this is boring." Grok: "hey, should we write about Kafka?" The human won, except the title page, where the model wrote itself in anyway. Fair: without one there would be no plan, without the other — three hundred pages across a few watches. Mistakes are split evenly. The funny ones get credited to Evgeniy. The rest are "Grok went for it."
   ]
 }
 
@@ -138,7 +138,7 @@
   v(1.8cm)
   text(size: 16pt, weight: "bold")[About the author, without the tea joke]
   v(0.3cm)
-  text(size: 10pt, fill: rgb("#6b6458"))[Evgeniy again. Grok doesn't write résumés: under "experience" he'd put "the entire internet," and HR would scream.]
+  text(size: 10pt, fill: rgb("#6b6458"))[Evgeniy again. Grok doesn't write résumés: under "experience" he'd put "the entire internet," and HR would complain.]
   v(0.65cm)
   [
     My name is *Evgeniy Tyurkin*. I live in Toronto. Java has paid the bills for more than twenty years. Lisp keeps me from hating it. Evenings: parentheses, Emacs, and this book. From Emacs I wrote #link("https://github.com/etyurkin/emagent")[emagent] so I wouldn't have to hop into another terminal for every reply. The official `claude` and Cursor CLIs work. They just aren't Emacs. Recursion, yes.

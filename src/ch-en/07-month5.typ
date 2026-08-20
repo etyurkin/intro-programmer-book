@@ -2,9 +2,9 @@
 
 = Month 5. Vacancy words, on your own hardware
 
-This month's job posts sound like a parts list from someone else's station: Redis, a queue, Kafka, Docker, CI. Pretty words. In interviews people say them with a smart face. Your job is not to memorize the words. It's to touch each thing *on your own* monolith, while it lies, screams, and refuses to start.
+This month's job posts sound like a parts list from someone else's station: Redis, a queue, Kafka, Docker, CI. Pretty words. In interviews people say them with a smart face. Your job is not to memorize the words. It's to touch each thing *on your own* monolith, while it glitches, complains, and refuses to start.
 
-If the cache lies — you'll see it with curl. If the queue doesn't drain — you'll see it in the log. If in Docker the database "can't be found" — you almost certainly wrote `localhost` inside the container. This isn't theory. This is an evening with a kettle.
+If the cache glitches — you'll see it with curl. If the queue doesn't drain — you'll see it in the log. If in Docker the database "can't be found" — you almost certainly wrote `localhost` inside the container. This isn't theory. This is an evening with a kettle.
 
 #rule[
   Entry here is with a living monolith: a database, password login, tests, a README. Otherwise finish month 4. Better a delay than Kafka on an empty CRUD. Empty CRUD plus Kafka is a station with no walls and a loudspeaker.
@@ -14,13 +14,13 @@ If the cache lies — you'll see it with curl. If the queue doesn't drain — yo
   Redis, Postgres, and the app this month live in Docker. On a Mac — Docker Desktop or Colima, whichever you already have. On Windows — Docker Desktop + WSL2. One YAML. The same `docker compose up` commands. Don't install Redis "also brew, and MSI, and apt in WSL" all at once: three Redises on one machine is a quest nobody ordered.
 ]
 
-#lesson(17, [Cache: fast, cheeky, sometimes a liar])
+#lesson(17, [Cache: fast, cheeky, sometimes glitchy])
 
 A cache is a copy closer by. Faster than the database. It can also tell a fairy tale about a task you already deleted. On station MODULE that's a plaque on the airlock wall: "oxygen: nominal." They hang the plaque so you don't run to the hold every time. If the tank is already empty and the plaque is old — you'll open the hatch anyway. That's a cache.
 
 The database is the hold. The cache is the plaque. HTTP without a cache goes down to the hold every time. With a cache — it looks at the wall. While the plaque is fresh, life is beautiful. Then someone changed the tank, forgot the plaque, and the interview asks: "you updated, the cache is stale — what happens?"
 
-If you answer "well it does it itself" — it doesn't. Itself it only expires on TTL, if you set a TTL. Or it lies forever, if you set "forever" and forgot the eviction.
+If you answer "well it does it itself" — it doesn't. Itself it only expires on TTL, if you set a TTL. Or it stays stale forever, if you set "forever" and forgot the eviction.
 
 === Why bother, if the database is "fast anyway"
 
@@ -30,7 +30,7 @@ On three tasks Postgres answers instantly, and a cache looks like theater. On th
 - you can write less often than you read;
 - you *agree* to sometimes show something slightly stale, or you know how to drop the key on write.
 
-A user's task list for 30 seconds is a textbook ceiling. Don't cache "every task of every person forever." That's not speed. That's a museum of lies.
+A user's task list for 30 seconds is a textbook ceiling. Don't cache "every task of every person forever." That's not speed. That's a museum of stale data.
 
 === Redis in a box, not "I'll install it on the system"
 
@@ -72,9 +72,9 @@ spring:
 
 Cache the task list for 30 seconds. On write — throw the key away. Don't "update the cache by hand with the same JSON": throw it away. Let the next GET go to the database and put something fresh. Two actions, not twelve.
 
-=== Story one: the plaque lies (stale cache)
+=== Story one: the plaque is stale (stale cache)
 
-Someone created a task "fix the antenna." GET `/tasks` — they see it. Then they renamed it to "fix the antenna now." GET — still "fix the antenna," no "now." Ten seconds passed. The person screams that the server is broken. The server isn't broken. *You* are: you cached the list and forgot to drop the key on update.
+Someone created a task "fix the antenna." GET `/tasks` — they see it. Then they renamed it to "fix the antenna now." GET — still "fix the antenna," no "now." Ten seconds passed. The person complains that the server is broken. The server isn't broken. *You* are: you cached the list and forgot to drop the key on update.
 
 That's the main interview question about cache. Not "what is Redis." It's: you updated, the cache is stale — what happens, and how do you fix it.
 
@@ -85,7 +85,7 @@ Fix it like this:
 3. Don't cache things that are different every time (a random quote of the day — fine; "the current user just saved" — no).
 
 #slow[
-  Reproduce the lie on purpose. Comment out the key drop. Create a task. GET. Update the title. GET immediately — the old name. Wait 31 seconds. GET — the new one. There, you *saw* TTL in your body, not in an article. Put the drop back. Now the second GET is immediately fresh. README: how to repeat both variants. It's useful to know how to break your own station on purpose. Otherwise in the interview you'll say "well in theory," and theory will smile at you with a yellow card.
+  Reproduce the stale cache on purpose. Comment out the key drop. Create a task. GET. Update the title. GET immediately — the old name. Wait 31 seconds. GET — the new one. There, you *saw* TTL in your body, not in an article. Put the drop back. Now the second GET is immediately fresh. README: how to repeat both variants. It's useful to know how to break your own station on purpose. Otherwise in the interview you'll say "well in theory," and theory will smile at you with a yellow card.
 ]
 
 === Story two: a hundred elephants on a footbridge (cache stampede)
@@ -453,7 +453,7 @@ target
 Otherwise half a disk and your secrets from `.env` ride into the context, if they happen to sit nearby. Don't copy `.env` into the image. Never. Even a textbook password `postgres/postgres` is better fed as a variable than baked in.
 
 #os[
-  Building the image: `docker build -t task-manager:dev .` in the project folder. Same on a Mac and in WSL. In PowerShell too, if Docker Desktop is running (the whale in the tray is alive, not dead). If the build screams at `mvnw` — no execute bit: in git, `mvnw` needs the executable bit, on Windows it sometimes gets lost. Then in the Dockerfile call `mvn`, and put Maven in the stage, or copy the wrapper carefully. Don't surrender to "well then only IDEA."
+  Building the image: `docker build -t task-manager:dev .` in the project folder. Same on a Mac and in WSL. In PowerShell too, if Docker Desktop is running (the whale in the tray is alive, not dead). If the build complains at `mvnw` — no execute bit: in git, `mvnw` needs the executable bit, on Windows it sometimes gets lost. Then in the Dockerfile call `mvn`, and put Maven in the stage, or copy the wrapper carefully. Don't surrender to "well then only IDEA."
 ]
 
 === Compose: three tenants, one network, and the `localhost` trap
@@ -547,7 +547,7 @@ jobs:
 #slow[
   `name: ci` — like signing the watch. The Actions tab will show this name.
 
-  `on: push` — any shove into the repository. `pull_request` — also on a PR, so you see red *before* the merge. You can narrow branches later. Right now let it scream always.
+  `on: push` — any shove into the repository. `pull_request` — also on a PR, so you see the error *before* the merge. You can narrow branches later. Right now let it fail always.
 
   `jobs.build` — one job. You can have several, you don't need to.
 
@@ -563,7 +563,7 @@ jobs:
 Don't put secrets in the YAML. The robot doesn't need your password to Earth. If a token is ever needed — GitHub Secrets, not a string in a file.
 
 #os[
-  First push from Windows: watch that `ci.yml` is LF, not CRLF with a surprise. Git usually handles it. If Actions screams at a weird character at the start of the file — BOM. Save UTF-8 without BOM. On a Mac this trouble is rarer. That doesn't mean "Mac is better." It means "Windows Notepad sometimes helps too hard."
+  First push from Windows: watch that `ci.yml` is LF, not CRLF with a surprise. Git usually handles it. If Actions complains at a weird character at the start of the file — BOM. Save UTF-8 without BOM. On a Mac this trouble is rarer. That doesn't mean "Mac is better." It means "Windows Notepad sometimes helps too hard."
 ]
 
 === A check that the station left
@@ -599,11 +599,11 @@ Login, task list — as in the README. If health is alive and the database isn't
 ]
 
 #github[
-  Commit `week20: compose postgres redis app`. A tag if you want. The README starts with `docker compose up`, not "open IDEA." Otherwise the tag lies.
+  Commit `week20: compose postgres redis app`. A tag if you want. The README starts with `docker compose up`, not "open IDEA." Otherwise the tag is a lie.
 ]
 
 #sunday[
-  Break one Dockerfile line on purpose (`FROM` a nonexistent tag, or a typo in `ENTRYPOINT`). Read the error out loud. Fix it. The fear "Docker is too big" passes when the red became specific, not cosmic.
+  Break one Dockerfile line on purpose (`FROM` a nonexistent tag, or a typo in `ENTRYPOINT`). Read the error out loud. Fix it. The fear "Docker is too big" passes when the error became specific, not cosmic.
 ]
 
 #rule[

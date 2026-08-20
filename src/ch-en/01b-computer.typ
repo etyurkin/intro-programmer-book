@@ -18,7 +18,7 @@ A computer is a box. Inside: motors made of sand (almost true: chips are silicon
 
 "Exactly that" is the trap.
 
-Tell a human "put the kettle on." They'll fill it, switch it on, wait, yell "ready." For a computer you have to spell it out:
+Tell a human "put the kettle on." They'll fill it, switch it on, wait, shout "ready." For a computer you have to spell it out:
 
 1. Pick up the kettle.
 2. If there's no water — fill it.
@@ -61,7 +61,7 @@ Picture MODULE's galley. Not a datacenter. A galley.
 
 A few more galley guests, briefly, no tour of the factory floor:
 
-- *Screen and keyboard* — a window into the galley, and the mouth you yell at the cook with. The mouse is a finger that pokes pictures.
+- *Screen and keyboard* — a window into the galley, and the mouth you shout at the cook with. The mouse is a finger that pokes pictures.
 - *The network* — an elevator to other kitchens. Later. There will be mail.
 - *The graphics card* — a separate cook for pictures. This book almost never needs it. Let it fry its own frames.
 - *BIOS / firmware* — a note on the door: "how to light the burner when everything else is still asleep." Don't touch it until the station asks.
@@ -141,7 +141,7 @@ Hidden files on a Mac and on Linux start with a dot: `.gitignore`, `.ssh`. Finde
 
 Two phrases everybody mixes up:
 
-- *File not found* — the path is lying: a typo, the wrong folder, the wrong drive.
+- *File not found* — the path is wrong: a typo, the wrong folder, the wrong drive.
 - *Permission denied* — the jar is there, the pantry clerk won't let you touch it. Rare in your own study folder. In system ones like `/usr`, `C:\Windows` — please don't play hero.
 
 == Text, and "the computer understands"
@@ -166,7 +166,7 @@ A computer "understands" text unlike a human. A human sees "energy 80" and guess
 
 Binary files are not text. A picture, music, a compiled program `Hello.class`, a Word document `.docx` (it pretends; inside it's zip). Open it in a notepad — a stew of glyphs. Don't fix that stew by hand. Pictures have other tools. `.class` belongs to Java; give it to Java.
 
-Why IntelliJ and VS Code, then, if a notepad can do text? Because a code editor highlights parentheses, yells at typos, jumps to the error. A notepad is honest, but it's like repairing a reactor with an eyeglass screwdriver. You can. Once. Then get a real wrench.
+Why IntelliJ and VS Code, then, if a notepad can do text? Because a code editor highlights parentheses, complains at typos, jumps to the error. A notepad is honest, but it's like repairing a reactor with an eyeglass screwdriver. You can. Once. Then get a real wrench.
 
 One more pact: *encoding*. Letters in a file are numbers too. There will be a compartment for that. For now remember one thing: if you opened a file and instead of `naïve` you see `naÃ¯ve` — nobody hacked the station. Two pantry clerks are just reading the same jars with different tables.
 
@@ -312,7 +312,7 @@ In PowerShell also `cls`. Commands are not deleted from history, only from your 
 
 History: up arrow. Repeat a command without typing it. On a Mac and in WSL, also Ctrl+R — search history. A drug. Later you won't be able to live without it.
 
-Interrupt a program that's hung and yelling:
+Interrupt a program that's hung and flooding the screen:
 
 Ctrl+C. Not copy (in a terminal, copy is usually Cmd+C / Ctrl+Shift+C, depends on the window). Ctrl+C is "stop, cook, put the knife down."
 
@@ -360,7 +360,7 @@ One more mix-up: *where the file actually is*.
 
 You downloaded `Hello.java` through a Windows browser into `Downloads`. In WSL that's `/mnt/c/Users/vasya/Downloads/Hello.java`. You can run it from there. Better copy it into `/home/vasya/dev/java-basics/`, so you aren't assembling recipes from someone else's warehouse through a hole in the wall.
 
-Line endings: Windows likes `\r\n` (two characters: carriage return and newline). Linux and Mac — `\n`. Git sometimes yells `LF will be replaced by CRLF`. For study Java/Lisp this is almost never death. If a script "won't run" and prints a weird `^M` — that's it, Notepad's inheritance. In WSL: `file your.sh` will sometimes hint. You'll learn later. Today just know that *text is not always the same text*.
+Line endings: Windows likes `\r\n` (two characters: carriage return and newline). Linux and Mac — `\n`. Git sometimes writes `LF will be replaced by CRLF`. For study Java/Lisp this is almost never death. If a script "won't run" and prints a weird `^M` — that's it, Notepad's inheritance. In WSL: `file your.sh` will sometimes hint. You'll learn later. Today just know that *text is not always the same text*.
 
 == Program, process, "it's running"
 
@@ -388,7 +388,7 @@ The same file can be launched twice — you'll get two processes. Two notepads. 
 
   Close the window — stop cooking. The file on disk is still there.
 
-  Delete the file — throw out the jar. A running process *may still live* (the recipe is already on the counter). Rarely matters in month one. Then suddenly it matters, when "I deleted it and it's still yelling."
+  Delete the file — throw out the jar. A running process *may still live* (the recipe is already on the counter). Rarely matters in month one. Then suddenly it matters, when "I deleted it and it's still printing."
 ]
 
 Where several Java processes come from: IDEA itself, your program itself, maybe Maven too. That's normal. That's not "a virus." Task Manager / Activity Monitor will show names. The name `java` will be there a lot. Don't kill everything in a row: you can shoot the IDE.
@@ -459,7 +459,7 @@ javac Energy.java
 java Energy
 ```
 
-`80`. If there's a typo in the `.java`, `javac` yells *now*, and the `.class` either isn't born or the old one stays. An old `.class` is a separate meanness: you fixed the source, forgot to compile, you're running yesterday's stew. That's why the green arrow in IDEA does both steps. In the terminal, remember there are two.
+`80`. If there's a typo in the `.java`, `javac` complains *now*, and the `.class` either isn't born or the old one stays. An old `.class` is a separate meanness: you fixed the source, forgot to compile, you're running yesterday's stew. That's why the green arrow in IDEA does both steps. In the terminal, remember there are two.
 
 #slow[
   A compiler is a translator who works *before* dinner. It will catch a grammar error on the shore.
@@ -591,7 +591,7 @@ We are not configuring a router today. We are only killing the myth that the int
 
 == Errors are a gift
 
-A beginner sees red and hears: "I'm unfit." A programmer sees red and hears: "here's the line."
+A beginner sees an error and hears: "I'm unfit." A programmer sees an error and hears: "here's the line."
 
 A compiler, an interpreter, an operating system — creatures with no tact and no laziness. They don't hint. They write *what's wrong*, often even *where*. The first line of the error matters more than the last. The last is a tail, like panic in the corridor. The first is who yanked the sensor.
 
@@ -604,12 +604,12 @@ Sample gifts:
 - `Connection refused` — nobody is listening at the door. The server isn't running, or the port is different.
 
 #slow[
-  An error is not a grade. It's a sensor on the station. The sensor yells because the air is running out, not because you're a bad person. Switch the sensor off (`catch` everything, ignore red in the IDE) — you'll die quietly in your cabin. Read the sensor.
+  An error is not a grade. It's a sensor on the station. The sensor goes off because the air is running out, not because you're a bad person. Switch the sensor off (`catch` everything, ignore errors in the IDE) — you'll die quietly in your cabin. Read the sensor.
 ]
 
 What to do with your hands is always the same:
 
-1. Read the *whole* first error. Not "the red word." The line.
+1. Read the *whole* first error. Not "the first word of the error." The line.
 2. Look at the line number in *your* file.
 3. If it's a path — `pwd` and `ls`.
 4. If the command wasn't found — either the window, or the install, or PATH.
@@ -697,7 +697,7 @@ Tab — name completion. You start `cd mod`, hit Tab, the terminal finishes `mod
 
 macOS, Windows, Linux (Ubuntu in WSL) — these are not "different computers." The hardware is similar: CPU, RAM, disk. What's different is the *master recipe* that lets the others in: who draws windows, who reads the keyboard, who decides whether you may touch a file.
 
-You can think of an operating system as the shift's head chef. You don't yell at the CPU yourself. You yell at the chef: "start this recipe." The chef gives the cook time, a piece of counter, the right to read a jar. Without a chef every program would fight over one bowl. That happened. It was called badly.
+You can think of an operating system as the shift's head chef. You don't shout at the CPU yourself. You ask the chef: "start this recipe." The chef gives the cook time, a piece of counter, the right to read a jar. Without a chef every program would fight over one bowl. That happened. It was called badly.
 
 #slow[
   An icon on the desktop is not a program. It's a picture and a pointer: "chef, start this file." The terminal does the same, only you say the name yourself. Same chef.
@@ -735,7 +735,7 @@ A program, when you launched it from a terminal, has three pipes:
 
 - *stdin* — this is where what you type flows. `Scanner` reads it.
 - *stdout* — this is where it writes "ordinary" output. `System.out`, `format t`.
-- *stderr* — this is where it yells errors. Often also on the screen, but it's a *different* pipe. That's why you can save output to a file and still see the errors.
+- *stderr* — this is where it writes errors. Often also on the screen, but it's a *different* pipe. That's why you can save output to a file and still see the errors.
 
 ```
 cat note.txt

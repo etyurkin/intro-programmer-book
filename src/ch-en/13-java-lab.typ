@@ -246,7 +246,7 @@ When `main` is longer than the screen, pull out:
 
 This isn't Spring. This is "so you don't get lost." The same instinct as service and repository, only without annotations and without a résumé.
 
-Break `set` on purpose: forget the upper bound. Type 10000. Watch the dashboard lie. Put the bound back. That's lab work. The report is a git diff, not an essay.
+Break `set` on purpose: forget the upper bound. Type 10000. Watch the dashboard glitch. Put the bound back. That's lab work. The report is a git diff, not an essay.
 
 == Lab 2. JSON by hand and a mention of Jackson
 

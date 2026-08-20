@@ -22,7 +22,7 @@ Four watches. After them — an address in the browser that answers not "this si
   An inspector from Earth promised to "look at the repo." The inspector is you, in a week.
 ]
 
-Fifth watch. Someone (not you) fixed `complete` so it does nothing, but it compiles. On the station that's called "optimism." A test is the right to say "you're lying" without yelling on the intercom.
+Fifth watch. Someone (not you) fixed `complete` so it does nothing, but it compiles. On the station that's called "optimism." A test is the right to say "that's wrong" without shouting on the intercom.
 
 === Lisp: a function with no name, because you can't be bothered
 
@@ -142,12 +142,12 @@ Example C. Only `'down`:
 `mapcan` glues the answer-lists. The lambda returned `(ANTENNA)` or `nil` (empty, nothing to glue). You get a list of names, not a list of pairs. If you used `mapcar` — you'll get `((ANTENNA) NIL NIL)` and wonder. Quest 5.L2 is about that. Break it with `mapcar` first, then fix it with `mapcan` or `loop`.
 
 #warn[
-  `(lambda n (* n 10))` without parentheses around `n` — parameters have to be a list `(n)`. Same hole as `defun` on day one. SBCL will yell about `n` not in a list. Parentheses around the names, even if there's only one name.
+  `(lambda n (* n 10))` without parentheses around `n` — parameters have to be a list `(n)`. Same hole as `defun` on day one. SBCL will complain about `n` not in a list. Parentheses around the names, even if there's only one name.
 ]
 
 === Java: a test that has the right to offend you
 
-A test is a separate program. It calls yours and yells if the answer is wrong. This is not "checking with your eyes." Eyes lie when they're tired. A test doesn't get tired. It only annoys.
+A test is a separate program. It calls yours and complains if the answer is wrong. This is not "checking with your eyes." Eyes lie when they're tired. A test doesn't get tired. It only annoys.
 
 A Maven project in IntelliJ: New Project → Maven → JDK 21. Coordinates like `com.example` / `taskstore`. On Windows without WSL you'll later run `mvnw.cmd test`, in WSL and on a Mac — `./mvnw test`. One `pom.xml` for everybody.
 
@@ -201,14 +201,14 @@ class TaskStoreTest {
 
 Write a test *that fails*, then fix the code. Otherwise you're testing the compiler, not yourself.
 
-The red-bar ritual:
+The failing-test ritual:
 
 1. In `complete`, temporarily do nothing (empty method, don't touch `done`).
 2. Test: add, `complete(id)`, `assertTrue(task.isDone())`.
-3. Run — red. Read the message. It should talk about `true` vs `false`, not about "doesn't compile."
+3. Run — the test fails. Read the message. It should talk about `true` vs `false`, not about "doesn't compile."
 4. Put back the line that sets done. Green.
 
-Nice, right. This isn't sadism. This is proof the test *can* yell. A green test that's green even when the code is dead — decoration.
+Nice, right. This isn't sadism. This is proof the test *can* fail. A green test that's green even when the code is dead — decoration.
 
 Three tests — three edges, not three copies of `add`.
 
@@ -301,7 +301,7 @@ On GitHub: `git push -u origin HEAD` from the branch, then a Pull Request — or
 ]
 
 #exercise("5.J2", "Java")[
-  Break `complete`, make sure it's red, put it back. In the README one sentence: how to run tests on your machine (Mac / WSL / `mvnw.cmd`).
+  Break `complete`, make sure it fails, put it back. In the README one sentence: how to run tests on your machine (Mac / WSL / `mvnw.cmd`).
 ]
 
 #exercise("5.J3", "Java")[
@@ -310,7 +310,7 @@ On GitHub: `git push -u origin HEAD` from the branch, then a Pull Request — or
 
 #github[A commit on the branch, then into main. `git log` should read like a station log, not like `asdf`.]
 
-The inspector looked. Tests green. `complete` lies again if you turn off one line — and the test sees it. On MODULE that's the first sensor that yells *before* the explosion. You can get used to that.
+The inspector looked. Tests green. `complete` glitches again if you turn off one line — and the test sees it. On MODULE that's the first sensor that goes off *before* the explosion. You can get used to that.
 
 #lesson(6, [HTTP is just text pretending to be the internet])
 
@@ -332,7 +332,7 @@ HTTP is letters. Not a cloud. Not Spring magic. Letters.
 ```
 
 #slow[
-  `format nil` doesn't yell into the terminal. It *returns a string*. Like `render-room` versus `print-rooms`. First the status line: version, code, phrase. Then headers. Then a *blank line*. Then the body.
+  `format nil` doesn't write into the terminal. It *returns a string*. Like `render-room` versus `print-rooms`. First the status line: version, code, phrase. Then headers. Then a *blank line*. Then the body.
   `~%` — newline. Two `~%~%` in a row after the header — that blank line. Forget one — the client will wait for headers forever, or glue the body onto `Content-Type`. Remember it like a spell: method, path, status, headers, body.
 ]
 
@@ -474,12 +474,12 @@ Launch:
 ./mvnw spring-boot:run
 ```
 
-On Windows without WSL: `mvnw.cmd spring-boot:run`. In IDEA — the green arrow on the class `...Application` with `@SpringBootApplication`. In the log, wait for something about `Tomcat started on port 8080`. No such line — it didn't "start." Read the red *above*. Often: port taken, Java isn't 21, a typo in the package.
+On Windows without WSL: `mvnw.cmd spring-boot:run`. In IDEA — the green arrow on the class `...Application` with `@SpringBootApplication`. In the log, wait for something about `Tomcat started on port 8080`. No such line — it didn't "start." Read the error *above*. Often: port taken, Java isn't 21, a typo in the package.
 
 Then in *another* window:
 
 #os[
-  On a Mac and in WSL, a long command wraps with a backslash `\`. In cmd.exe — `^`. In PowerShell, one long line is easier. `curl` already exists on Windows 10+ (`curl.exe`). If PowerShell replaces `curl` with its `Invoke-WebRequest` — call `curl.exe`. If it yells weird — go into Ubuntu (WSL) and poke from there, `localhost` is shared if Java is in WSL too. Java on Windows, curl in WSL: `localhost` is sometimes that one, sometimes not. Keep the client and the server in one universe.
+  On a Mac and in WSL, a long command wraps with a backslash `\`. In cmd.exe — `^`. In PowerShell, one long line is easier. `curl` already exists on Windows 10+ (`curl.exe`). If PowerShell replaces `curl` with its `Invoke-WebRequest` — call `curl.exe`. If it complains weird — go into Ubuntu (WSL) and poke from there, `localhost` is shared if Java is in WSL too. Java on Windows, curl in WSL: `localhost` is sometimes that one, sometimes not. Keep the client and the server in one universe.
 ]
 
 ```
@@ -576,7 +576,7 @@ Earth got `UP`. The captain said "not bad" — on MODULE that's a medal. The to-
   The rule "title isn't empty" lives in the service. Then a test will check it, and a future little console, and you at three in the morning.
 ]
 
-Seventh watch. The controller got fat: list, numbers, create, lookup. The hatch guard at the airlock is also smelting steel. The captain isn't yelling because he's cruel — because when Earth sends a second door (a console, a bot, "one more controller"), the rules will drift apart. Pull the brain inside once.
+Seventh watch. The controller got fat: list, numbers, create, lookup. The hatch guard at the airlock is also smelting steel. The captain isn't shouting because he's cruel — because when Earth sends a second door (a console, a bot, "one more controller"), the rules will drift apart. Pull the brain inside once.
 
 The controller is the watch at the airlock. The service is the mechanic inside.
 
@@ -781,7 +781,7 @@ The captain walked the corridor and didn't find the task list in the controller.
   Week check: a fresh folder, README, curl. Not "it worked on my machine."
 ]
 
-Eighth watch, night. `System.out.println` in the service is yelling in the corridor. The next compartment is asleep. A log is an entry in the journal: who created, who deleted, which id. Earth will later ask "so what happened at 03:12." You won't remember. The journal will.
+Eighth watch, night. `System.out.println` in the service is noise in the corridor. The next compartment is asleep. A log is an entry in the journal: who created, who deleted, which id. Earth will later ask "so what happened at 03:12." You won't remember. The journal will.
 
 `application.yml` (or `.properties`, if start.spring.io handed you that — don't spawn both):
 

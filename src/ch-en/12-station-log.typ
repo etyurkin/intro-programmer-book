@@ -25,7 +25,7 @@ The previous mechanic left a scrap on the table:
 
 We will not make a game with pictures. We will make a world out of parentheses. A world more honest than the panel.
 
-Start the REPL, `sbcl`, the star. First a global — yes, stars, yes, we yell:
+Start the REPL, `sbcl`, the star. First a global — yes, stars, yes, we shout:
 
 ```lisp
 (defparameter *energy* 100)
@@ -159,7 +159,7 @@ In the REPL:
 ```lisp
 (look)
 (walk 'corridor)
-(walk 'cupola)   ; no hatch, it yells
+(walk 'cupola)   ; no hatch, it complains
 (walk 'galley)
 (walk 'cupola)
 ```
@@ -565,7 +565,7 @@ A room with no line in `*flavor*` — `assoc` returns `nil`, `cdr` of `nil` in `
 
 `solder` — solder. Useful when frost on the antenna won't take duct tape. `frost-note` — a note from Щ.: "don't blow a hair dryer. energy. patience."
 
-`append` on a global doesn't change the old list in place — it *builds a new one*. That's why `setf`. If you write a bare `append` and don't assign, the world stays five rooms, and you'll yell at the REPL. A classic.
+`append` on a global doesn't change the old list in place — it *builds a new one*. That's why `setf`. If you write a bare `append` and don't assign, the world stays five rooms, and you'll shout at the REPL. A classic.
 
 Update `reset-world` too. Otherwise after a reset the new compartments vanish, as if Щ's pencil broke again. Reset is a contract with yourself: the *whole* world in one place.
 
@@ -581,7 +581,7 @@ In the REPL after fixing the doors:
 (walk 'antenna)
 ```
 
-If `walk` yells "no hatch," you're either in the wrong room, or the edge is one-way, or `*here*` isn't what you think. `(look)` before panic. The panel lies less than memory.
+If `walk` complains "no hatch," you're either in the wrong room, or the edge is one-way, or `*here*` isn't what you think. `(look)` before panic. The panel lies less than memory.
 
 #exercise("S.L8", "Lisp")[
   Put `cargo` and `antenna` into `*doors*`, `*at*`, `*flavor*`, and into `reset-world`. Command `read-frost-note`: if `frost-note` is in the pocket — print Щ's warning about the hair dryer. Not in the pocket — honestly say where it lies (antenna). Check: airlock to cargo and back; cupola to antenna; reactor to antenna in one `walk` — no.
@@ -599,7 +599,7 @@ You want to go to the reactor. You type like a human:
 (walk reactor)
 ```
 
-SBCL yells something like: variable `REACTOR` is unbound. Or it tries to *call* function `reactor`. Depends what's on that name. Either way you didn't walk.
+SBCL complains something like: variable `REACTOR` is unbound. Or it tries to *call* function `reactor`. Depends what's on that name. Either way you didn't walk.
 
 #slow[
   Lisp first *evaluates* arguments, then calls the function. `walk` wants a room symbol. `'reactor` — "put the tag, don't evaluate." Without the apostrophe `reactor` is "find this variable's value / call this name." No variable. No function. Fire.
@@ -828,7 +828,7 @@ Energy should be 3. If it's 100 — you loaded the wrong path, or after `load-wo
 
 Second sabotage: delete one closing parenthesis. `load-world` should fall over. Read the error. Put the parenthesis back. This is not "the file is mystically broken." The form isn't closed.
 
-Third: write `:ENERGY "lots"`. The load may pass, the world becomes poisonous. The first `tick` will show the truth. There's no validation in `apply-world` — this is a teaching save, not a bank. That's why `read` from *your* disk is ok, from a disk on the internet — no. We already yelled, we're yelling again.
+Third: write `:ENERGY "lots"`. The load may pass, the world becomes poisonous. The first `tick` will show the truth. There's no validation in `apply-world` — this is a teaching save, not a bank. That's why `read` from *your* disk is ok, from a disk on the internet — no. We already said it, we're saying it again.
 
 #exercise("S.L11", "Lisp")[
   Save the world, by hand set `:FROST 1` and `:HERE ANTENNA`. Load. One `blast` should make frost 0 (if energy is enough). Second file: break a parenthesis, catch the `read` error, fix it. In the watch log — one sentence: how a `print`-save differs from `energy=80` in the Java dashboard.

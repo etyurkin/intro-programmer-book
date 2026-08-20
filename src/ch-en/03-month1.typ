@@ -6,7 +6,7 @@ By the end of week four you have your own Java console program — not a copied 
 
 Station MODULE has been hanging in orbit for about a hundred years, held together by duct tape, optimism, and three sensors that still work. You are the new mechanic. Congratulations. Spacesuit's in the locker. Someone already drank the coffee.
 
-The first month is not "learn programming." It's the month the computer stops being furniture and becomes a creature you can ask questions — and it sometimes answers. Sometimes it yells. Sometimes it stays quiet, and that's worse.
+The first month is not "learn programming." It's the month the computer stops being furniture and becomes a creature you can ask questions — and it sometimes answers. Sometimes it complains. Sometimes it stays quiet, and that's worse.
 
 Four watches. After each one — a commit, even a crooked one. Especially a crooked one.
 
@@ -48,7 +48,7 @@ Now a tag:
 (defparameter *energy* 100)
 ```
 
-SBCL will answer something like `*ENERGY*`. It yells in caps because inside, symbols live without caring about case: `*energy*` and `*ENERGY*` are the same tag. The asterisks aren't syntax. They're a Lisper habit of shouting: "this is global, don't step on it." Like a wet-floor sign.
+SBCL will answer something like `*ENERGY*`. It writes in caps because inside, symbols live without caring about case: `*energy*` and `*ENERGY*` are the same tag. The asterisks aren't syntax. They're a Lisper habit of shouting: "this is global, don't step on it." Like a wet-floor sign.
 
 #repl-note[
   You didn't "create a variable" in the Java sense. You hung the value `100` on the symbol `*energy*`. Ask the symbol — you get a hundred. Hang something else — the hundred is gone. There's no `int` on the tag. Lisp doesn't watch whether you put a bolt in there or a nut. Yet.
@@ -91,7 +91,7 @@ Break it again:
   oxygen)
 ```
 
-It will probably yell. `let`'s argument is a *list of bindings*, and each binding is its own little list `(name value)`. Without the inner parentheses Lisp has no idea where the name ended and the number began. It's like writing "nuts 40" on a crate with no divider: the clerk doesn't know if that's forty nuts or a nut named Forty.
+It will probably complain. `let`'s argument is a *list of bindings*, and each binding is its own little list `(name value)`. Without the inner parentheses Lisp has no idea where the name ended and the number began. It's like writing "nuts 40" on a crate with no divider: the clerk doesn't know if that's forty nuts or a nut named Forty.
 
 Correct again:
 
@@ -166,7 +166,7 @@ Check:
 (status 0)
 ```
 
-`GREEN`, `YELLOW`, `RED`. SBCL yelling caps again. Same symbols.
+`GREEN`, `YELLOW`, `RED`. SBCL writing caps again. Same symbols.
 
 Order of the rungs matters. Put `(t 'red)` first and everything is always red. A ladder whose first step is the floor. Try it, admire it, put it back.
 
@@ -214,7 +214,7 @@ Ask a human in the REPL:
 ```
 
 #repl-note[
-  `format t` yells into the terminal. `t` here is "standard output," not "yes," even though it's the same symbol. Life is complicated. `finish-output` — shove the letters out of the pipe *now*, don't hoard them until end of line. Without it, on some systems the prompt shows up *after* you've already typed something. Hilarious. Once.
+  `format t` writes into the terminal. `t` here is "standard output," not "yes," even though it's the same symbol. Life is complicated. `finish-output` — shove the letters out of the pipe *now*, don't hoard them until end of line. Without it, on some systems the prompt shows up *after* you've already typed something. Hilarious. Once.
   `read-line` listens until Enter and returns a string. `parse-integer` turns letters into a number. `:junk-allowed t` means "if there's junk after the digits, don't crash, take what you can." Type `12abc` — you get 12. Type `asdf` — you get `nil`. A shrug.
 ]
 
@@ -249,7 +249,7 @@ An error like `undefined function: 1`. Lisp decided this was a *call*: function 
 
 === Java: types that watch so you don't mix a bolt with a nut
 
-In Java every box says what's inside. The compiler is a grouchy warehouse clerk. Not a REPL in the same sense: you write a file, compile, run, get yelled at. On the plus side, the clerk catches some of the stupidity *before* flight, not during docking.
+In Java every box says what's inside. The compiler is a grouchy warehouse clerk. Not a REPL in the same sense: you write a file, compile, run, get an error. On the plus side, the clerk catches some of the stupidity *before* flight, not during docking.
 
 ```java
 int energy = 100;
@@ -271,7 +271,7 @@ if (ok) {
 }
 ```
 
-Curly braces are a pen for code. The semicolon is "the sentence ended." Without it Java doesn't start the next sentence. It yells.
+Curly braces are a pen for code. The semicolon is "the sentence ended." Without it Java doesn't start the next sentence. It complains.
 
 The class `Energy` lives in the file `Energy.java`, or Java gets offended. It does that a lot.
 
@@ -330,7 +330,7 @@ int a = 18, b = 21, c = 7;
 double avg = (a + b + c) / 3.0;
 ```
 
-`3.0` so the division is fractional. `(a + b + c) / 3` on integers chops the tail. Java's rule: integers on integers — integer. The clerk doesn't yell here. He *silently* steals the fraction. That's worse than an error.
+`3.0` so the division is fractional. `(a + b + c) / 3` on integers chops the tail. Java's rule: integers on integers — integer. The clerk doesn't complain here. He *silently* steals the fraction. That's worse than an error.
 
 Example B. Compare strings with `.equals`, not `==`:
 
@@ -355,11 +355,11 @@ while (n > 0) {
 
 While `n > 0` — print and shrink. Forget to shrink — infinite loop, the terminal like a sensor nobody told to stop. Ctrl+C.
 
-=== If it broke: Java yells, and that's normal
+=== If it broke: Java complains, and that's normal
 
 The compiler writes a lot. Read the *first* error, not the last. Often the first one births the rest.
 
-*Class doesn't match the file.* In `Energy.java` you wrote `public class Energia`. It yells: class Energia is public, should be declared in a file named Energia.java. Rename either the file or the class. They are one creature.
+*Class doesn't match the file.* In `Energy.java` you wrote `public class Energia`. It complains: class Energia is public, should be declared in a file named Energia.java. Rename either the file or the class. They are one creature.
 
 *Forgot the semicolon.* The line `int energy = 100` without `;` — ';' expected. Java cannot guess where the thought ended. Put it there.
 
@@ -392,7 +392,7 @@ Three working eye-runs before the quests.
 ]
 
 #exercise("1.L3", "Lisp")[
-  `lamp`: energy 0..100. Return `'green` / `'yellow` / `'red` with the same thresholds as `status` in the text (80 and 40). Call it on 100, 80, 79, 40, 0. Five calls, five answers, in a comment next to them. If even one lies — thresholds or the order of `cond`.
+  `lamp`: energy 0..100. Return `'green` / `'yellow` / `'red` with the same thresholds as `status` in the text (80 and 40). Call it on 100, 80, 79, 40, 0. Five calls, five answers, in a comment next to them. If even one answer is wrong — thresholds or the order of `cond`.
 ]
 
 #exercise("1.J1", "Java")[
@@ -602,7 +602,7 @@ System.out.println(rooms.size());
 ```
 
 #repl-note[
-  `List<String>` — "a list of strings." Angle brackets — what beast we put inside. That's a *generic*, a word for the interview. Later you try `rooms.add(3)` — the clerk yells: 3 is not a string. `get(1)` — the second element, because zero. `size()` — how many there are now, not "how many fit." A lot will fit. Memory runs out before `ArrayList` says "no."
+  `List<String>` — "a list of strings." Angle brackets — what beast we put inside. That's a *generic*, a word for the interview. Later you try `rooms.add(3)` — the clerk complains: 3 is not a string. `get(1)` — the second element, because zero. `size()` — how many there are now, not "how many fit." A lot will fit. Memory runs out before `ArrayList` says "no."
   Left side `List`, right side `new ArrayList`. The blueprint says "list," the hardware is "a list on an array." Don't think about why yet. Tomorrow it'll be the same with `Task` and `new Task`.
 ]
 
@@ -731,7 +731,7 @@ Three hand-runs before the quests.
 
 #github[Commit `week2: lists and todo`. Yes, a TODO in week two. Everybody started that way, even the ones who lie.]
 
-At the end of the shift the corridor on the screen matches the corridor behind your back. Almost. The list still has `garden`, and behind the hatch — crates. The past lies in the data. You aren't repairing the station yet. You're repairing the list. That's already the job.
+At the end of the shift the corridor on the screen matches the corridor behind your back. Almost. The list still has `garden`, and behind the hatch — crates. The data still has the old past. You aren't repairing the station yet. You're repairing the list. That's already the job.
 
 #lesson(3, [Functions that don't chatter extra])
 
@@ -821,10 +821,10 @@ Two more neighboring gestures.
 `setf` — hang a new value on a place. Here the place is the local `e`. `(simulate '(10 20 80))`: 100−10=90, 90−20=70, 70−80=0. Not negative. `dolist` walks, `setf` updates, at the end `e` is the answer of the whole `let`.
 
 #warn[
-  Printing inside `spend` is a favor that bites. Want to sum the costs without yelling — already can't, `format` is nailed on. Split: compute / print. `render` returns a string, `print-...` yells. Quest 3.L2 is exactly about that, not about pretty.
+  Printing inside `spend` is a favor that bites. Want to sum the costs without printing — already can't, `format` is nailed on. Split: compute / print. `render` returns a string, `print-...` prints. Quest 3.L2 is exactly about that, not about pretty.
 ]
 
-Break `clamp`: swap `lo` and `hi`. `(clamp 5 10 0)`. The `cond` ladder may return a miracle. Write two calls in the REPL until you see the lie. Then put it back.
+Break `clamp`: swap `lo` and `hi`. `(clamp 5 10 0)`. The `cond` ladder may return a miracle. Write two calls in the REPL until you see the answer is wrong. Then put it back.
 
 === Java: the blueprint and the hunk of metal
 
@@ -955,7 +955,7 @@ Found — return it. Not found — `null`. Call `complete` on `null` — boom. S
 
 Three runs.
 
-1. Two `add`, print the ids. Expect 1 and 2, not 0 and 1. If zeros — `nextId` started at zero, people on the station count from one, the captain will yell.
+1. Two `add`, print the ids. Expect 1 and 2, not 0 and 1. If zeros — `nextId` started at zero, people on the station count from one, the captain will shout.
 2. `complete` on the first, print `isDone` of both. Only the first is `true`.
 3. `findById(99)` — `null`. Print it explicitly `System.out.println(store.findById(99));` — you'll see the word `null`. Make friends before it shows up in Spring.
 
@@ -964,7 +964,7 @@ Three runs.
 ]
 
 #exercise("3.L2", "Lisp")[
-  `render-room` returns a string. `print-rooms` only prints. Split "what to say" from "how to yell into the terminal."
+  `render-room` returns a string. `print-rooms` only prints. Split "what to say" from "how to print into the terminal."
 ]
 
 #exercise("3.L3", "Lisp")[
@@ -1116,7 +1116,7 @@ try {
 ```
 
 #repl-note[
-  `try` — a pen where it might blow. `catch` — what to do if *exactly this* blew. `System.err` — the stream for yelling, not for ordinary output. In a simple terminal it looks the same. Later in logs (month 2) they'll split.
+  `try` — a pen where it might blow. `catch` — what to do if *exactly this* blew. `System.err` — the stream for errors, not for ordinary output. In a simple terminal it looks the same. Later in logs (month 2) they'll split.
   `e.getMessage()` — a short complaint. Sometimes the whole `e.printStackTrace()` is useful — the pile of who called whom. This week a message plus "the file didn't write" is enough.
 ]
 
@@ -1126,7 +1126,7 @@ On Windows you can still write the path as `tasks.txt` in the current folder. Do
   An empty `catch (Exception e) {}` — hide the fire under a rug. The rug will catch later, in the demo. Catch `IOException` and `NumberFormatException` where they live, not "everything."
 ]
 
-`Scanner.nextInt()` on letters yells `InputMismatchException`. Catch it and ask again. Or, like in lesson 1, read a string:
+`Scanner.nextInt()` on letters throws `InputMismatchException`. Catch it and ask again. Or, like in lesson 1, read a string:
 
 ```java
 String raw = in.nextLine().trim();

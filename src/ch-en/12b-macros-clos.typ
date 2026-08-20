@@ -184,7 +184,7 @@ Energy wasn't charged — the body didn't live. Now `*energy*` = 20, `with-energ
   `with-energy`: not enough energy — `'too-low` and `*energy*` doesn't change; enough — the body and the charge. Check both. The `cost` counter through `gensym`, not "eh my name is rare."
 ]
 
-=== When a macro lies: computed twice
+=== When a macro glitches: computed twice
 
 A classic:
 
@@ -226,7 +226,7 @@ In Java: class `Task`, inside it methods `complete()`, `getTitle()`. The object 
 
 In CLOS: the class carries *slots* (fields). Verbs live in *generic functions*. One function `status`, several methods: for the reactor, for the antenna, for "anything." When you call `(status x)`, Lisp looks at the class of `x` and picks a method.
 
-This isn't "worse than Java" and isn't "better." It's a different center: the verb matters more than the object's passport. Handy on the station: you yell `status` all the time, and the gadgets are different.
+This isn't "worse than Java" and isn't "better." It's a different center: the verb matters more than the object's passport. Handy on the station: you call `status` all the time, and the gadgets are different.
 
 === A class — a blueprint of slots
 
@@ -269,7 +269,7 @@ Create:
   (describe *reactor*)
   ```
 
-  Useful when there are five slots and memory is already lying.
+  Useful when there are five slots and memory is already glitching.
 ]
 
 Without an accessor you can `(slot-value obj 'energy)` — crude, like opening a panel with a screwdriver. An accessor is a normal door. `slot-value` — when you're writing infrastructure. In this chapter's quests — accessor.
@@ -458,7 +458,7 @@ A list of objects. `mapcar` over the verb `module-status`. Each object knows how
 ]
 
 #exercise("C.L3", "Lisp")[
-  An `:around` method or a separate function `alarm-p`: energy 0 — the status has `ALARM`. A reactor at 0 and an antenna at 0 both yell. Not copy-paste of two `if`s in two methods, if you already know `call-next-method`. If you don't — two `if`s, but write in a comment how that's worse.
+  An `:around` method or a separate function `alarm-p`: energy 0 — the status has `ALARM`. A reactor at 0 and an antenna at 0 both complain. Not copy-paste of two `if`s in two methods, if you already know `call-next-method`. If you don't — two `if`s, but write in a comment how that's worse.
 ]
 
 == Macro + CLOS: don't blend them on night one
@@ -523,7 +523,7 @@ They won't ask this in a Java interview. It will settle in the head: an object i
 
 == A program that doesn't ask for a restart
 
-In Java the loop is: wrote → `javac` or Maven → built a jar → stopped the server → uploaded → started → you pray that `main` is the one. On a phone it's worse: APK, install, green arrow, the activity is born again. Hot swap in the IDE sometimes lies. "Rewrite a method on a live object" the language does not promise as a staff feature.
+In Java the loop is: wrote → `javac` or Maven → built a jar → stopped the server → uploaded → started → you pray that `main` is the one. On a phone it's worse: APK, install, green arrow, the activity is born again. Hot swap in the IDE sometimes glitches. "Rewrite a method on a live object" the language does not promise as a staff feature.
 
 Common Lisp promises it as staff. The REPL is not a week-one toy. It's *the same* world the program is spinning in. `defun` and `defmethod` don't "compile the project." They replace a function *in an already live image*.
 

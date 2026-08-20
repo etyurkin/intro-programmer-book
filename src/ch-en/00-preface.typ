@@ -14,7 +14,7 @@ Reading the whole book in a weekend, nodding, and closing it — almost nothing 
 
 AI will do it. A service, a test, even a README where you "confidently know Kafka." Fast. Sometimes even right.
 
-The catch is the question. The model answers what you asked. "Write me a backend" — you get a cathedral with no evacuation plan. "Why does the button save a trailing space" — you get a decent answer *if* you already know a string can lie at the edges. That isn't from the chat. That's the foundation: a variable, an error, a file is not a database, a test is not a ritual.
+The catch is the question. The model answers what you asked. "Write me a backend" — you get a cathedral with no evacuation plan. "Why did I get 12 when I added 1 and 2" — you get a decent answer *if* you already know a number and a string are different things. That isn't from the chat. That's the foundation: a variable, an error, a file is not a database, a test is not a ritual.
 
 Without the foundation you cannot ask the right question. You'll ask "make it work" and sit in someone else's code like a dark compartment with no flashlight. In the interview they'll ask *you* for the flashlight. They won't let the model into the room.
 
@@ -24,9 +24,9 @@ Without the foundation you cannot ask the right question. You'll ask "make it wo
 
 == Two languages, and that isn't confusion
 
-*Lisp* is not here for the résumé. Almost nobody wants Lisp on a résumé, and that's wonderful: you can do stupid things. Forty minutes. Read a chunk → type it in the REPL → *definitely break it and fix it* → write a tiny horrible thing of your own. If you didn't break it — you weren't practicing, you were watching. Watching a welding show and actually welding are different jobs. The main thing is not to turn Lisp into lecture notes. Lecture notes about parentheses are no longer parentheses.
+*Lisp* is not here for the résumé. Almost nobody wants Lisp on a résumé, and that's wonderful: you can do stupid things. Forty minutes. Read a chunk → type it in the REPL → *definitely break it and fix it* → write a tiny thing of your own. If you didn't break it — you weren't practicing, you were watching. Watching a welding show and actually welding are different jobs. The main thing is not to turn Lisp into lecture notes. Lecture notes about parentheses are no longer parentheses.
 
-*Java* is what they pay you for later. Two hours. Twenty minutes of those looking at how an idea is built, and an hour and a half making it work *on your machine*. Red errors, docs, Stack Overflow, a dumb question to the chat next door — not failure. That's the profession, just without the salary. The salary shows up when you stop fainting at red.
+*Java* is what they pay you for later. Two hours. Twenty minutes of those looking at how an idea is built, and an hour and a half making it work *on your machine*. Errors, docs, Stack Overflow, a dumb question to the chat next door — not failure. That's the profession, just without the salary. The salary shows up when you stop fainting at error messages.
 
 *SICP* is not on the schedule. For a beginner it's an anatomy textbook instead of a kitchen: useful, but you want to eat now. You'll open it when you yourself hit a wall: "is recursion magic?" — and suddenly the dry book gets interesting. Not before. Open it in week one and you might hate Lisp, yourself, and books in general. Don't.
 
@@ -47,10 +47,10 @@ Friday is boring on purpose. A beginner on Friday opens "one more Kafka guide" b
 
 Saturday is sacred. This is not "more lessons." This is *your* station: a TODO, task-manager, anything you can poke and say "I made this." If theory eats Saturday, in three months you'll have notes and no repository. HR does not clone notes.
 
-Sunday you may walk. Seriously. The brain finishes wiring while you go for bread. Open chapter four instead of bread and Monday you'll have mash and a grudge against parentheses.
+Sunday you may walk. Seriously. The brain finishes wiring while you go for bread. Open chapter four instead of bread and Monday you'll have a jumble in your head and a grudge against parentheses.
 
 #rule[
-  Learned a thing — into code immediately. Don't read about Spring storage for two hours. After twenty minutes: "ok, this should now show up in *my* project." Then let it scream errors. That's the design.
+  Learned a thing — into code immediately. Don't read about Spring storage for two hours. After twenty minutes: "ok, this should now show up in *my* project." Then let it throw errors. That's the design.
 ]
 
 #rule[
@@ -100,7 +100,7 @@ AI is a roommate who has seen this before: "why won't it compile," "what's that 
 
 == If life ate the day
 
-Missed Tuesday — on Wednesday don't read Tuesday *and* Wednesday. Read Tuesday. Wednesday can wait. Three chapters on Saturday isn't a feat, it's mash: parentheses mix with annotations and you'll decide "I'm stupid." You aren't stupid. You just fed the brain three dinners at once.
+Missed Tuesday — on Wednesday don't read Tuesday *and* Wednesday. Read Tuesday. Wednesday can wait. Three chapters on Saturday isn't a feat, it's a jumble in your head: parentheses mix with annotations and you'll decide "I'm stupid." You aren't stupid. You just fed the brain three dinners at once.
 
 Missed two weeks — open the last lesson that *ran*, and your repo. Not "from scratch, I forgot everything." You didn't forget everything. You forgot details. Details come back faster than it feels if the code is alive.
 

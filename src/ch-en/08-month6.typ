@@ -89,7 +89,7 @@ inside the monolith and a log. There is no cluster. That's fine.
 A Postman screenshot or a curl screenshot is a plus, not a requirement. The requirement is that a classmate *without you in chat* sees health `UP`.
 
 #os[
-  Two columns of commands in the README aren't aesthetics, they're survival. Mac and WSL: `./mvnw`, backslash in a multiline curl. Windows cmd: `mvnw.cmd`, `^`. PowerShell is often easier as one line. Write "if curl screams — go into Ubuntu (WSL) and hit it from there, the server on localhost is shared." That one sentence saves an hour of someone else's life and your evening of "well it works on my machine."
+  Two columns of commands in the README aren't aesthetics, they're survival. Mac and WSL: `./mvnw`, backslash in a multiline curl. Windows cmd: `mvnw.cmd`, `^`. PowerShell is often easier as one line. Write "if curl complains — go into Ubuntu (WSL) and hit it from there, the server on localhost is shared." That one sentence saves an hour of someone else's life and your evening of "well it works on my machine."
 ]
 
 === A repository that doesn't smell like a dorm
@@ -160,7 +160,7 @@ Spring will *not* tell the interview anything by itself. You will.
 
 The problem is a study problem, but a real one: a to-do list that survives a restart, and you can't read other people's items. So a task has an owner: the user id from login, not from a URL parameter.
 
-The moving parts: registration and login, JWT, CRUD, pagination. Flyway migrations — the schema is in git, not 'in my head.' On list reads there's Redis for 30 seconds, on write I drop the key; without the drop the cache lies, I broke that on purpose and wrote it in the README.
+The moving parts: registration and login, JWT, CRUD, pagination. Flyway migrations — the schema is in git, not 'in my head.' On list reads there's Redis for 30 seconds, on write I drop the key; without the drop the cache glitches, I broke that on purpose and wrote it in the README.
 
 The email queue isn't a separate service, it's an event after the transaction commits and a log line 'tell the human.' I didn't put Kafka in production: I understand a log versus HTTP, and in the repo there's either a tiny broker or notes — whichever is honest.
 
@@ -245,7 +245,7 @@ Not the whole language. One evening of joy. Being able to evaluate `(+ 1 2)` and
 
 Five to ten applications a week. Not fifty by copy-paste. Not one "when the letter is perfect." Cover letters are about *your* server, not "I learn fast." A posting with Kafka and kube: you can write if you're ready to say the truth: "I didn't put it in production, here's a monolith and here's a queue." A lie burns on the second question. Sometimes on the first.
 
-HR does not read a soul. HR reads whether there's Java, whether there's a link, whether the letter screams "READY FOR CHALLENGES!!!" Then the letter reaches a person who *can* open GitHub. They need a hook, not a novel.
+HR does not read a soul. HR reads whether there's Java, whether there's a link, whether the letter shouts "READY FOR CHALLENGES!!!" Then the letter reaches a person who *can* open GitHub. They need a hook, not a novel.
 
 === Sample letter (short, with one truth)
 
@@ -330,7 +330,7 @@ Yes. "What does a junior's first month look like?" "Who reviews?" "What's prod o
 
 If you can't open it — don't cite it. Say the idea. A link to a file that isn't there burns faster than a Kafka lie.
 
-=== Where to send so you aren't yelling into a vacuum
+=== Where to send so you aren't shouting into a vacuum
 
 Job sites, internship telegram chats, people from the course, *warm* letters ("you said they were hiring"). Five to ten cold ones a week. If you sent fifty copies overnight — you aren't a hero, you're spam. Spam gets marked.
 
@@ -373,7 +373,7 @@ Drifted on "what if two requests at once" — go back to the counter and `@Trans
 
 Drifted on "tell me about the project" — that's lesson 22, not Kafka. Kafka has nothing to do with it, however much you'd like to hide in a new topic.
 
-Silence after ten letters is a sensor too. Check: is there a link, does compose come up, does the README scream on Windows. Sometimes the market is just slow. Sometimes the porthole is dirty. Dirt you fix. A slow market — more letters, not "I'll wait it out in shame."
+Silence after ten letters is a sensor too. Check: is there a link, does compose come up, does the README complain on Windows. Sometimes the market is just slow. Sometimes the porthole is dirty. Dirt you fix. A slow market — more letters, not "I'll wait it out in shame."
 
 === Sample card (you can almost copy the form)
 
@@ -542,7 +542,7 @@ Check the links from a phone: GitHub, résumé PDF, email in the profile. A recr
 
 And with that the book as a textbook ends. Next — other people's rooms, other people's questions, your files. Station MODULE isn't going anywhere. Neither are the parentheses. Go.
 
-If you're scared — that's normal. It's scary to fix a reactor in month one, it's scary to hit Send. Hit it anyway. A letter that didn't go out doesn't open. A station that wasn't turned on doesn't scream with sensors — and that isn't calm, that's the silence of an empty corridor.
+If you're scared — that's normal. It's scary to fix a reactor in month one, it's scary to hit Send. Hit it anyway. A letter that didn't go out doesn't open. A station that wasn't turned on doesn't beep with sensors — and that isn't calm, that's the silence of an empty corridor.
 
 Tea. Send. A card. Parentheses.
 
