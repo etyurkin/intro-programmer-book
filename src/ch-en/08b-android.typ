@@ -4,7 +4,7 @@
 
 Sometimes the backend market looks at a junior the way an airlock looks at a meteor: politely, but it doesn't open. Kafka in the posting, "a year of experience," silence after ten letters. That doesn't mean you threw six months away. Java didn't go anywhere. The door is just different: a *pocket*. A phone in your hand is the same computer, only without a server room and with a Back button.
 
-Android apps have been written in Kotlin for a while, but Java is alive there, and Studio eats it. You already know classes, `if`, and "why is it underlined in red." That's enough to build a calculator and not die. If it goes well — you'll catch Kotlin in a couple of weeks: it's from the same family as Java, just less water.
+Android apps have been written in Kotlin for a while, but Java is alive there, and Studio eats it. You already know classes, `if`, and "why is it underlined as an error." That's enough to build a calculator and not die. If it goes well — you'll catch Kotlin in a couple of weeks: it's from the same family as Java, just less water.
 
 You don't have to put Lisp on a phone. The forty minutes of parentheses can stay. Station MODULE doesn't care which screen you fix sensors from.
 
@@ -34,7 +34,7 @@ The project indexes for minutes the first time. The Gradle strip at the bottom w
 
 Emulator: Device Manager → Create → some Pixel without a 16K screen and without folding wings. System image — a fresh stable one, with Google APIs, not "Android Canary from Mars." First start — tea. Sometimes two. A cold emulator start on a weak laptop is a small industry sin, not yours.
 
-If the laptop is weak, the fan screams, the emulator draws a slideshow — *don't hero it*. Turn on USB debugging on your own phone and run on hardware:
+If the laptop is weak, the fan howls, the emulator draws a slideshow — *don't hero it*. Turn on USB debugging on your own phone and run on hardware:
 
 1. Settings → About phone → seven taps on Build number. "You are now a developer" appears. Yes, seven. That isn't a 2012 joke, it's still like that.
 2. Developer options → USB debugging.
@@ -60,9 +60,9 @@ An emulator on Windows without virtualization is a slideshow or a refusal. In BI
 
 On a Mac "the emulator won't start" is often fixed by: download the system image, Cold Boot Now in Device Manager, don't panic at the first `Waiting for target device`. Cold boot is like restarting the station, not like "delete everything."
 
-=== Red that doesn't mean "you're an idiot"
+=== Errors that don't mean "you're an idiot"
 
-`SDK location not found` — Studio doesn't know where the SDK is. File → Settings → Appearance & Behavior → System Settings → Android SDK (on a Mac that's Android Studio → Settings). The path has to exist. If you moved to a new disk — the path is old, Studio screams. Point it at the new one, don't reinstall everything from scratch.
+`SDK location not found` — Studio doesn't know where the SDK is. File → Settings → Appearance & Behavior → System Settings → Android SDK (on a Mac that's Android Studio → Settings). The path has to exist. If you moved to a new disk — the path is old, Studio complains. Point it at the new one, don't reinstall everything from scratch.
 
 `Failed to install the following Android SDK packages` — network, license, or the disk ran out. Download through SDK Manager. Don't download a "sdk-tools" zip from page fourteen.
 
@@ -140,7 +140,7 @@ In `activity_main.xml` (the Code tab, not just Preview):
 
 `LinearLayout` — boxes in a column. `orientation="vertical"` — like a list in a corridor. `EditText` — a field you poke. `inputType` hints to the keyboard "numbers, minus and a dot are ok," not a whole novel. `TextView` — only shows, you don't type there with a finger.
 
-The Preview tab lies less often than it used to, but Code is the source of truth. If Preview is pretty and the phone has no button — you were looking at the wrong XML.
+The Preview tab is wrong less often than it used to, but Code is the source of truth. If Preview is pretty and the phone has no button — you were looking at the wrong XML.
 
 `dp` is "density," so a button isn't microscopic on one phone and huge on another. `sp` is the same for text, and it also respects "large font" in settings. Don't set text height in `dp` without a reason: a person with bad eyesight has a right to large letters. `match_parent` — take the parent's width/height. `wrap_content` — by contents. If everything is `wrap_content` in a column — the fields are fine. If a `ListView` is also `wrap`, it may shrink and you'll decide the list "doesn't work."
 
@@ -204,7 +204,7 @@ Replace the package `com.example.calc` with the one Studio picked itself. Green 
 
 === Empty field, letters, and divide by zero — this isn't "later"
 
-Empty input: a person opened the app and immediately poked `+`. Without a check, `parseDouble("")` screams `NumberFormatException`, the activity dies, Android draws "the app has stopped." That isn't how you fix an oxygen sensor on the station: you don't blow the compartment because someone forgot a digit.
+Empty input: a person opened the app and immediately poked `+`. Without a check, `parseDouble("")` throws `NumberFormatException`, the activity dies, Android draws "the app has stopped." That isn't how you fix an oxygen sensor on the station: you don't blow the compartment because someone forgot a digit.
 
 In the code above, empty → `0`. That's a teaching gesture, like in the console "zero if they stay quiet." You can do otherwise: write "enter two numbers" in `out` and don't compute. Pick one and stick to it. The main thing is *don't crash*.
 
@@ -245,7 +245,7 @@ private Double parseOrNull(EditText field) {
 }
 ```
 
-In the listener: if `null` — `out.setText("enter numbers")` and `return`. Empty and "asdf" behave equally honestly. Zero as "the human is silent" sometimes lies: `2+` empty became `2+0`. For a station calculator it's better to yell than to invent.
+In the listener: if `null` — `out.setText("enter numbers")` and `return`. Empty and "asdf" behave equally honestly. Zero as "the human is silent" sometimes lies: `2+` empty became `2+0`. For a station calculator it's better to fail than to invent.
 
 == Lifecycle: why an activity isn't "just main"
 

@@ -4,7 +4,7 @@
 
 #lesson(0, [Workbench, parentheses, and the green button])
 
-Until you have a workbench, this book is just text you can't bite. Today we install tools and write one tiny program in each language. If something won't install — congratulations, you're already at work: read the *whole* error message, not just the red word at the front.
+Until you have a workbench, this book is just text you can't bite. Today we install tools and write one tiny program in each language. If something won't install — congratulations, you're already at work: read the *whole* error message, not just the first word.
 
 This lesson can eat an entire evening. That's normal. Installing a JDK the first time is like finding a hatch in the dark: you swear, then you find it, then you wonder why the hatch was drawn on the map. Later evenings are shorter. This one is the cover charge.
 
@@ -181,7 +181,7 @@ On native Windows, the same, if `javac` is on PATH. If "is not recognized as a c
 
 Java wants a class, `main`, and semicolons. Next to Lisp that's like filling out a form after talking to a friend. The jobs, though, look like this.
 
-Break it on purpose. Remove the semicolon after `println(...)`. `javac` will write `';' expected` and a line number. That's the friendliest yell on the station. Then put the semicolon back. Then put class `Hello` in a file `Bye.java` and see what it says. Then put it back. The goal is not a perfect file, it's a reflex: you read the red, you don't close it.
+Break it on purpose. Remove the semicolon after `println(...)`. `javac` will write `';' expected` and a line number. That's the friendliest message on the station. Then put the semicolon back. Then put class `Hello` in a file `Bye.java` and see what it says. Then put it back. The goal is not a perfect file, it's a reflex: you read the error, you don't close it.
 
 In IntelliJ: New Project → New Java Class → `Hello` → green arrow. If there's no arrow — click inside `main` with the mouse, a green triangle appears in the gutter with the line numbers. If "SDK not specified" — File → Project Structure → SDK → 21. The IDE is not a telepath: you have to tell it where the JDK is.
 
@@ -222,7 +222,7 @@ git add .
 git commit -m "Hello from week 0"
 ```
 
-If git yells `Please tell me who you are` — you skipped `git config`. Do it and commit again.
+If git writes `Please tell me who you are` — you skipped `git config`. Do it and commit again.
 
 Hook up the remote and `git push -u origin main`. GitHub tokens on Windows sometimes pop a window — agree, that's normal. On a Mac a browser may open. In WSL it sometimes asks for a Personal Access Token: GitHub → Settings → Developer settings → a token with the `repo` right. Paste it as the password. No asterisks again.
 
@@ -263,13 +263,13 @@ Three lines. Already better than empty. You'll add more later.
 A compiler and a REPL are nasty teachers. They're almost always right. Read the *first* error from the top. The line matters more than the feeling "everything died." If you pasted the error into search — paste it without your filename and without the pile of quotes you invented yourself.
 
 #repl-note[
-  An error is not a grade. The grade comes at the interview, and even then not for how much red you got, but for whether you can read the red. Today's drill: broke it, read it, fixed it, alive.
+  An error is not a grade. The grade comes at the interview, and even then not for how many errors you got, but for whether you can read them. Today's drill: broke it, read it, fixed it, alive.
 ]
 
 Frequent guests of week 0:
 
 - `command not found` — no program, or no PATH.
-- `';' expected` — Java wants a semicolon. Look at the line it named, and the line *above*: sometimes the compiler lies by one line.
+- `';' expected` — Java wants a semicolon. Look at the line it named, and the line *above*: sometimes the compiler points at a *nearby* line.
 - `cannot find symbol` — a typo in a name. `System.out` is not `system.out`. Java remembers case like an offended archivist.
 - `illegal function call` in Lisp — a list without a quote that wanted to be data.
 - `end of file on #<stream>` — a parenthesis not closed by the end of the file.

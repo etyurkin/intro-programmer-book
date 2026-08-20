@@ -378,7 +378,7 @@ Yes/no. `true` / `false`. Not `t` and not `nil`. Not 1 and 0, though other langu
 
 Text. An object, not "an array of letters you solder yourself," though inside it's almost that.
 
-Gluing with `+` is convenient and sometimes shameful for speed. For a dashboard it's enough. `equals` for comparison, we already yelled that. Quotes only double: `'a'` in Java is a character, not a string.
+Gluing with `+` is convenient and sometimes shameful for speed. For a dashboard it's enough. `equals` for comparison, we already said that. Quotes only double: `'a'` in Java is a character, not a string.
 
 == int
 
@@ -558,7 +558,7 @@ A server on `127.0.0.1` is visible to itself. On `0.0.0.0:8080` — also from a 
 
 `@Override` — "I'm replacing an ancestor's method," not a new method with a similar name.
 
-Without the annotation a typo in the name gives a *new* method, and the one you thought you were overriding stays old. The compiler is silent. The annotation yells. Stick it always. That's a siren on a typo in `equals` / `hashCode` / `toString`, not bureaucracy. Overload is the neighbor: same name, *different* arguments. Mixing overload and override in an interview is a classic, like `==` on strings.
+Without the annotation a typo in the name gives a *new* method, and the one you thought you were overriding stays old. The compiler is silent. The annotation complains. Stick it always. That's a siren on a typo in `equals` / `hashCode` / `toString`, not bureaucracy. Overload is the neighbor: same name, *different* arguments. Mixing overload and override in an interview is a classic, like `==` on strings.
 
 == interface
 

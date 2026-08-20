@@ -4,7 +4,7 @@
 
 We take the monolith to "you can show this to a human." Users, passwords (not in the clear, we aren't barbarians), indexes, pages of twenty. In parallel — collections and the simple puzzles without which an interview turns into a lottery. Lisp: you may start a tiny language of your own. That's legal and even desirable.
 
-By the end of week sixteen you don't "know Spring Security." You can explain *out loud* why a password doesn't sit as text, why `?userId=` in the URL is a hole the size of an airlock, why a `HashMap` lost a key, and why a counter from two threads lies. Whiteboards love that. Kafka on a whiteboard without that is a whistle with no air.
+By the end of week sixteen you don't "know Spring Security." You can explain *out loud* why a password doesn't sit as text, why `?userId=` in the URL is a hole the size of an airlock, why a `HashMap` lost a key, and why a counter from two threads glitches. Whiteboards love that. Kafka on a whiteboard without that is a whistle with no air.
 
 #rhythm[
   *Mon–Thu:* 40 min Lisp (registry, hash-table, stack, purity) + 120 min Java (auth, index, collections, races). \
@@ -211,7 +211,7 @@ Don't put userId in the JSON body of `POST /tasks` "to make it easier." The clie
 
 The same sin in a pretty dress: `GET /users/7/tasks`. Looks RESTful. If 7 comes from the URL and isn't checked against the ticket — same hole, just in form. The station does not have to have "nested users" in the path. `GET /tasks` and "who are you" from SecurityContext — boring and airtight.
 
-=== When Security screams and you scream back
+=== When Security complains and you complain back
 
 - `403` on everything, including login: `requestMatchers("/auth/**")` is the wrong prefix, or the JWT filter swallows login too early.
 - `401` with a correct ticket: the header isn't `Authorization: Bearer ...`, or an extra newline, or you put quotes inside. PowerShell loves to wreck quotes — go into WSL.
@@ -275,7 +275,7 @@ Flyway `V4__idx_tasks_user.sql` — one line, a big personality. Without an inde
 
 This does not speed up `SELECT * FROM tasks`. This speeds up *this* condition. An index on every column "just in case" is a table of contents that lists every word: the book is thicker, writing hurts more, and the benefit is a cat's worth.
 
-=== An EXPLAIN session, with thousands of rows, otherwise it lies
+=== An EXPLAIN session, with thousands of rows, otherwise it glitches
 
 On three rows Postgres may skip the index: "I can see it with my eyes." Pour in thousands.
 
@@ -324,7 +324,7 @@ Index Scan using idx_tasks_user on tasks  (cost=0.29..140.00 rows=5000 width=...
 Your numbers will differ. Don't look at "twice as fast," look at the *word*: Seq vs Index. If after the index it's still Seq Scan — either stats didn't update (`ANALYZE tasks;`), or the condition is different (`WHERE user_id IS NOT NULL` on almost every row — the index is useless), or there are few rows and the planner isn't stupid.
 
 #slow[
-  `EXPLAIN` without `ANALYZE` is the plan, how Postgres *intends* to. With `ANALYZE` — also how long it actually took, with live numbers. For the README you need both runs: before and after, on the same volume. Three rows in the table — the comparison lies like a polite sensor: "all nominal," and oxygen is already whistling.
+  `EXPLAIN` without `ANALYZE` is the plan, how Postgres *intends* to. With `ANALYZE` — also how long it actually took, with live numbers. For the README you need both runs: before and after, on the same volume. Three rows in the table — the comparison glitches like a polite sensor: "all nominal," and oxygen is already whistling.
 ]
 
 Don't index `title` "because we might search." Might — when a `WHERE title = ...` or `LIKE 'foo%'` (prefix) shows up. `LIKE '%foo%'` a normal index often won't save. Say honestly in the interview "depends on the query," that's an adult answer, not "an index is always faster."
@@ -382,7 +382,7 @@ limit 20 offset 40
 ]
 
 #exercise("14.J2", "Java")[
-  README: `EXPLAIN` before and after. On three rows Postgres may skip the index — pour in thousands, otherwise the comparison lies like a polite sensor.
+  README: `EXPLAIN` before and after. On three rows Postgres may skip the index — pour in thousands, otherwise the comparison glitches like a polite sensor.
 ]
 
 #exercise("14.J3", "Java")[
@@ -413,7 +413,7 @@ System.out.println(cabin.get(new UserId(1)));
 It prints `null`. Alex is in the cabin. The key "same number" is, to the map, *a different crate*. By default `equals` is `==`: the same object in memory, not "similar inside." `hashCode` is from the address too. Two `new UserId(1)` — two planets.
 
 #slow[
-  HashMap first computes `hashCode`, runs to a bucket, then in the bucket compares `equals`. If `equals` says "we're the same" and `hashCode` is different — the key sits in one bucket, they look in another, forever a miss. The contract: equal objects must have the same hashCode. The reverse is false: one hashCode is not yet equality (a collision). Break one without fixing the other — the map lies quieter than Hibernate.
+  HashMap first computes `hashCode`, runs to a bucket, then in the bucket compares `equals`. If `equals` says "we're the same" and `hashCode` is different — the key sits in one bucket, they look in another, forever a miss. The contract: equal objects must have the same hashCode. The reverse is false: one hashCode is not yet equality (a collision). Break one without fixing the other — the map glitches quieter than Hibernate.
 ]
 
 A hand fix:
@@ -543,7 +543,7 @@ Write it on paper. Then in the IDE. Then break the input `"]"` and `""`. Empty �
   Break it on purpose: a key class *without* equals/hashCode, `put` and `get` with different `new`. README: which `null` you saw. Then a record. The same `get` — not null. Two lines of output. That's a story you'll later tell at the board.
 ]
 
-#lesson(16, [Two requests at once, and why the counter lies])
+#lesson(16, [Two requests at once, and why the counter glitches])
 
 Tomcat is multithreaded anyway: two HTTPs can poke the service at the same time. You didn't order this. It's already like that. One user — one thread per request, two users — two threads, one `Counter` for both, if you hung it that way.
 

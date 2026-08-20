@@ -7,7 +7,7 @@ A programmer is not a person with a memorized language. A programmer is a person
 1. Understand what they want (sometimes — what you want).
 2. Cut it into pieces a machine can do.
 3. Write.
-4. See that it lies or crashes.
+4. See that it does something wrong or crashes.
 5. Fix it.
 6. Again. Again. Again.
 
@@ -34,7 +34,7 @@ Job posts are written like spells: Kafka, k8s, microservices, "one year of exper
 - Java: types, lists, how `equals` differs from `==`, exceptions, objects.
 - HTTP: methods, statuses, JSON.
 - SQL: a select with a join, why a key, why an index.
-- Spring Boot: a thin door from the street, rules in the service, the database in the repository, the transaction on the service.
+- Spring Boot: the controller takes HTTP, the service holds the rules, the repository talks to the database, the transaction sits on the service.
 - Git: commits, a diff, not fainting at a branch.
 - Your own project, which you can tell in three minutes *without notes*.
 
@@ -50,7 +50,7 @@ In interviews they often ask you to write a loop, explain JOIN, and talk about y
 
 Not Hollywood. A test failed. Ticket: "the button saves an empty name." You read someone else's code. You write twenty lines. You argue what to call a field. A call where twenty minutes go to whether `cancelled` is a status or a separate table. Lunch. Another ticket. That isn't the whole profession. That's *docking*: it shakes, but you're already on the station.
 
-Sometimes the day is beautiful: you found why prod lies on Mondays, and it was a timezone. Sometimes the day is dumb: rename a field in five places. Both days are work. Romanticizing only the beautiful ones is how you burn out by month three, when the beautiful ones are scarce.
+Sometimes the day is beautiful: you found why prod glitches on Mondays, and it was a timezone. Sometimes the day is dumb: rename a field in five places. Both days are work. Romanticizing only the beautiful ones is how you burn out by month three, when the beautiful ones are scarce.
 
 They'll ask "so how are you doing on time." An honest "I don't know, here's what I already did" beats the theater of "everything's great." The station likes sensors, not optimism without numbers.
 
@@ -58,14 +58,14 @@ They'll ask "so how are you doing on time." An honest "I don't know, here's what
 
 Further on, if you don't get stuck copying annotations:
 
-- *Middle* — they trust you with a slice of the system, not one button. You already say "that's a bad idea" and sometimes they listen. Pay goes up. The amount of Slack does not go down.
+- *Middle* — they trust you with a slice of the system, not one button. You already say "that's a bad idea" and sometimes they listen. Pay goes up. The pile of Slack messages does not get smaller.
 - *Senior* — people come with a question, not a ready ticket. You decide *what* to build, not only *how* to write the loop. Pay grows faster than hair. An unpleasant duty appears: stopping other people's bad ideas, including yesterday's yours.
-- *Architect* — you draw arrows between boxes and argue whether Kafka is needed *this time* for a reason. Sometimes the arrows save the station. Sometimes it's the career of someone tired of debugging who isn't ready for management yet.
+- *Architect* — you decide how the station is built: which compartments exist, how they dock, what happens if this hatch opens. That is not managing people — you don't have to want to manage people. The arrows on the diagram are the side effect. The job is decisions that decide whether the station falls apart in six months or not. Sometimes you argue whether Kafka is needed *this time* for a reason.
 - *Manager* — if you suddenly stop wanting code. Then meetings and "so how are we on the timeline." Same `loop`, only the arguments are people, and they return `nil` less often than they promise. That isn't in this textbook, and we all sighed with relief.
 
 This book is the first hatch. The rest happens by itself if you don't stop fixing things.
 
-Don't pick "senior or manager" in week one. In week one, `Hello` has to print. A career is what grows out of a pile of evenings, not a slide labeled "trajectory."
+In week one, `Hello` has to print. A career is what grows out of a pile of evenings, not a slide labeled "trajectory."
 
 == Why Lisp then
 
@@ -73,22 +73,22 @@ Because the on-ramp to Java is easy to turn into six months of `@Autowired` anno
 
 On a résumé you can poke Lisp into "also I can." They won't ask in the interview. Good. They'll ask about `HashMap`. And `HashMap` after an alist in Lisp is no longer magic, it's a pocket with labels, only fast.
 
-Lisp also treats the fear of errors. In the REPL you broke it — you got a message, you fixed it, you live. No five-minute build to learn you forgot a parenthesis. That reflex ("broke → read → fix") later saves you in Java, where the build is exactly five minutes and very offended.
+Lisp also treats the fear of errors. In the REPL you broke it — you got a message, you fixed it, you live. No five-minute build to learn you forgot a parenthesis. That reflex ("broke → read → fix") later saves you in Java, where the build takes five minutes and the error is one missing parenthesis.
 
 == Six months is dense
 
-Weekdays: two-forty. Plus Saturday. If by week twelve you have no server of your own with a database — don't tweak Kafka, finish the server. Curiosity is cheaper than a lost month. Missed a week — don't read three chapters on Saturday, that isn't a feat, that's mash. Take the current lesson and your project.
+Weekdays: two-forty. Plus Saturday. If by week twelve you have no server of your own with a database — don't tweak Kafka, finish the server. Curiosity is cheaper than a lost month. Missed a week — don't read three chapters on Saturday, that isn't a feat, that's a jumble in your head. Take the current lesson and your project.
 
 Six months × about six evenings × two-forty — that's a lot of hours. Enough for fingers to remember. Not enough to become someone who "has already seen everything." And you don't need to. They hire juniors not for "seen everything." They hire them for "I see, I fix, I tell."
 
-If you work another full-time job — six months may stretch to eight. Fine. The calendar in the book is a map, not a bomb timer. Station MODULE wasn't built on a Jira sprint either, judging by the duct tape.
+If you work another full-time job — six months may stretch to eight months. Fine. The calendar in the book is a plan, not a bomb timer. Station MODULE wasn't built on a Jira sprint either, judging by the duct tape.
 
 == On copying
 
 Other people's answers — after your own attempt. At work you'll Google every day, that's normal. The difference is whether you can *read* what you pasted and change one line without collapsing the rest.
 
-Copying a quest from the answers in the first minute is like looking up a crossword and deciding you're smart. Warm. Empty. In a month the interview crossword won't have answers at the back of the book.
+Copying a quest from the answers in the first minute is like looking up a crossword and deciding you're smart. Feels like you got it. You didn't. In a month the interview crossword won't have answers at the back of the book.
 
-Peeking after twenty minutes of anger — fine. You already thought. The brain got the query. Then the answer *lands*, instead of flying past.
+Peeking after twenty minutes of failed attempts — fine. You already thought. The brain got the query. Then the answer *lands*, instead of flying past.
 
 Code from this book — into your study repos, please. Other people's books and commercial repos — don't pass them off as yours. The station is already on duct tape; let's skip lawsuits and résumé lies. Lies in orbit end with an open airlock.

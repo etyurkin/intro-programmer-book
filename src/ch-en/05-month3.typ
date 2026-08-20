@@ -54,7 +54,7 @@ Quit SBCL. Open it again. Memory is empty. The file is not:
 ```
 
 #repl-note[
-  `with-open-file` opens a stream and *closes* it, even if you screamed an error in the middle. Same gesture as Java `try-with-resources`. A file you forgot to close later refuses to open on the station "for no reason."
+  `with-open-file` opens a stream and *closes* it, even if you hit an error in the middle. Same gesture as Java `try-with-resources`. A file you forgot to close later refuses to open on the station "for no reason."
 ]
 
 Look at the file with your eyes — an ordinary text editor, not witchcraft. Parentheses and quotes. If you append garbage by hand, `read` will take offense. Honest offense: "I expected a Lisp value and got mush."
@@ -186,7 +186,7 @@ Try to break it. That matters more than a pretty `SELECT`.
 INSERT INTO tasks (title) VALUES (NULL);
 ```
 
-Postgres will scream something like:
+Postgres will complain something like:
 
 ```
 ERROR:  null value in column "title" of relation "tasks"
@@ -282,7 +282,7 @@ When this query is alive — next lesson, JPA, that flying annotation. Today the
   Default port `5432`. If the installer offered another — write it down. `Connection refused` almost always means: the service isn't running, or the port is wrong, or you're knocking on the wrong machine.
 ]
 
-=== When it screams, don't read from the bottom first — and not from the top either
+=== When it complains, don't read from the bottom first — and not from the top either
 
 Typical mush at Spring startup:
 
@@ -327,7 +327,7 @@ No table. Are you in the right database? `\c taskdb`, `\dt`. People often create
 ]
 
 #exercise("9.J3", "Java")[
-  Break it on purpose: wrong password in the yml, start, *one* exception line — into the README. Then put it back. Then a database that doesn't exist. Then a table that doesn't exist. Three different screams, three different meanings. This is not sadism. This is an accident map.
+  Break it on purpose: wrong password in the yml, start, *one* exception line — into the README. Then put it back. Then a database that doesn't exist. Then a table that doesn't exist. Three different errors, three different meanings. This is not sadism. This is an accident map.
 ]
 
 #github[Commit `week9: psql and jdbc`. In the commit — the SQL that creates the table, not only Java. Schema is code too.]
@@ -549,7 +549,7 @@ The service builds `ProjectView` by hand. The controller does not return the ent
 === Repair the station when "but it worked yesterday"
 
 - The app started, no tables: Flyway is off, or it puts files somewhere other than `db/migration`.
-- Flyway screams `checksum mismatch`: you edited a V1 that already ran. Put the file back, make a V3. Or on *localhost* you can drop the database and run from scratch — you cannot do that in prod, remember this sentence.
+- Flyway writes `checksum mismatch`: you edited a V1 that already ran. Put the file back, make a V3. Or on *localhost* you can drop the database and run from scratch — you cannot do that in prod, remember this sentence.
 - `failed to connect`: password, port, WSL vs Windows again.
 - You saved an entity, psql is empty: you're looking at the wrong database / the wrong `public` schema. Or the transaction rolled back — that's tomorrow.
 
