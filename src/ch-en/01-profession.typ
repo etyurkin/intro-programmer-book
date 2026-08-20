@@ -60,7 +60,7 @@ Further on, if you don't get stuck copying annotations:
 
 - *Middle* — they trust you with a slice of the system, not one button. You already say "that's a bad idea" and sometimes they listen. Pay goes up. The pile of Slack messages does not get smaller.
 - *Senior* — people come with a question, not a ready ticket. You decide *what* to build, not only *how* to write the loop. Pay grows faster than hair. An unpleasant duty appears: stopping other people's bad ideas, including yesterday's yours.
-- *Architect* — you decide how the station is built: which compartments exist, how they dock, what happens if this hatch opens. That is not managing people — you don't have to want to manage people. The arrows on the diagram are the side effect. The job is decisions that decide whether the station falls apart in six months or not. Sometimes you argue whether Kafka is needed *this time* for a reason.
+- *Architect* — you decide how the station is built: which compartments exist, how they dock, what happens if this hatch opens. The arrows on the diagram are the side effect. The job is decisions that decide whether the station falls apart in six months or not. Sometimes you argue whether Kafka is needed *this time* for a reason.
 - *Manager* — if you suddenly stop wanting code. Then meetings and "so how are we on the timeline." Same `loop`, only the arguments are people, and they return `nil` less often than they promise. That isn't in this textbook, and we all sighed with relief.
 
 This book is the first hatch. The rest happens by itself if you don't stop fixing things.
