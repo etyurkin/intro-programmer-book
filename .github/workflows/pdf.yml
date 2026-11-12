@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: books-${{ github.ref }}
@@ -17,9 +17,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
 
-      - uses: typst-community/setup-typst@v4
+      - uses: typst-community/setup-typst@48aeee7543d37f01afd1ffb27307dc277387ba13
         with:
           typst-version: "0.15.1"
 
@@ -30,7 +32,7 @@ jobs:
 
       - run: make books
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: books
           path: |
@@ -39,21 +41,3 @@ jobs:
             out/intro-to-the-programming-profession.pdf
             out/intro-to-the-programming-profession.epub
           if-no-files-found: error
-
-      - name: Publish latest books
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: pdfs
-          name: Latest books
-          body: |
-            Built from ${{ github.sha }}.
-            Russian: `intro-k-professii-programmist.pdf` / `.epub`
-            English: `intro-to-the-programming-profession.pdf` / `.epub`
-          files: |
-            out/intro-k-professii-programmist.pdf
-            out/intro-k-professii-programmist.epub
-            out/intro-to-the-programming-profession.pdf
-            out/intro-to-the-programming-profession.epub
-          fail_on_unmatched_files: true
-          make_latest: true
